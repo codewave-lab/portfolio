@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   font-family: 'Paperozi';
-  
+
   scroll-behavior: smooth;
 }
 
@@ -19,6 +19,7 @@ a {
   color: inherit;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
