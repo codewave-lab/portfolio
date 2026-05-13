@@ -25,7 +25,7 @@
   /* 줄바꿈 방지 */
   white-space: nowrap;
   /* 텍스트 사이 간격 */
-  gap: 120px;
+  gap: 80px;
   /* 글자 크기 */
   font-size: 200px;
   /* 글자 두께 */
@@ -42,7 +42,7 @@
   /* 세로 중앙 보정 */
   transform: translateY(-50%);
   /* 애니메이션 */
-  animation: flowText 25s linear infinite;
+  animation: flowText 80s linear infinite;
 }
 
 /* 선택 방지 */
