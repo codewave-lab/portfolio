@@ -23,3 +23,8 @@ ul,
 li {
   list-style: none;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

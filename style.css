@@ -68,75 +68,155 @@
 ========================= */
 
 
-/* header */
+/* =========================
+   HEADER
+========================= */
 
 .header {
+  /* 크기 */
+  width: calc(100% - 40px);
+  /* 좌우 여백 포함한 전체 너비 */
   max-width: 1400px;
   height: 68px;
-  background-color: #f5f5f5;
+
+  /* 배치 */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 50px;
 
+  /* 위치 */
   position: fixed;
   top: 20px;
-  left: 0;
-  width: 100%;
   left: 50%;
+
+  /* 가운데 정렬 */
   transform: translateX(-50%);
+
+  /* 디자인 */
+  background: rgba(245, 245, 245, 0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* 내부 여백 */
+  padding: 0 20px;
+
+  /* 레이어 */
+  z-index: 1000;
+
+  /* 크기 계산 안정화 */
+  box-sizing: border-box;
+
+  /* 애니메이션 */
+  transition:
+    width 0.4s ease,
+    transform 0.4s ease,
+    border-radius 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
+
+
+/* =========================
+   스크롤 후 상태
+========================= */
+
+.header.scrolled {
+
+  /* X축 축소 */
+  width: 68%;
+
+  /* 살짝 작아지는 느낌 */
+  transform:
+    translateX(-50%) scale(0.96);
+
+  /* 더 둥글게 */
+  border-radius: 999px;
+
+  /* 배경 더 연하게 */
+  background: rgba(255, 255, 255, 0.6);
+
+  /* 떠있는 느낌 */
+  /* <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   왼쪽 영역
+========================= */
 
 .header-title {
   display: flex;
-  margin-left: 20px;
+  align-items: center;
+  gap: 10px;
 }
+
+
+/* =========================
+   오른쪽 영역
+========================= */
 
 .header-contact {
-  width: auto;
-  gap: 5px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin-right: 20px;
+  gap: 10px;
 }
 
-.header-contact a:nth-child(1) {
-  border-radius: 20px;
-  padding: 0 20px;
-  height: 40px;
-  font-size: 14px;
 
-}
-
-.header-contact a:nth-child(2) {
-  border-radius: 20px;
-  padding: 0 20px;
-  height: 40px;
-  font-size: 14px;
-
-}
+/* =========================
+   버튼 공통
+========================= */
 
 .header-contact a {
   display: flex;
   align-items: center;
-  transition: all 0.3s ease;
+  justify-content: center;
+
+  height: 40px;
+  padding: 0 20px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+
+/* =========================
+   프로젝트 버튼
+========================= */
 
 .link-go-project {
   background-color: white;
 }
 
-.link-go-project:hover {
-  background-color: rgb(119, 119, 119, 0.8);
+
+/* =========================
+   hover
+========================= */
+
+.link-go-project:hover,
+.mail-adress:hover {
+
+  background-color: rgba(119, 119, 119, 0.8);
   color: white;
+
+  /* 살짝 뜨는 느낌 */
+  transform: translateY(-2px);
 }
 
-.mail-adress:hover {
-  background-color: rgb(119, 119, 119, 0.8);
-  color: white;
-}
+/* =========================
+   HEADER 끝
+========================= */
 
 /* main */
 
@@ -160,7 +240,7 @@
   justify-content: center;
   text-align: center;
 
-  margin-top: 150px;
+  margin-top: 360px;
   margin-bottom: 50px;
 }
 
@@ -177,7 +257,42 @@
   font-size: 14px;
   color: #777;
   line-height: 1.8;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
+}
+
+/* scroll 섹션 */
+
+.scroll {
+  margin-bottom: 120px;
+
+}
+
+.scroll p:nth-child(1) {
+  font-size: 20px;
+}
+
+/* 아래 화살표 */
+
+.arrow {
+  margin-top: 20px;
+  font-size: 50px;
+
+  animation: arrow 2s ease-in-out infinite;
+
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-0%);
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* profile */
@@ -206,8 +321,8 @@
 
 
 .profile-content {
-
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .profile-title {
@@ -307,7 +422,8 @@
 /* exp */
 
 .exp {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 
 .exp-title {
@@ -343,8 +459,7 @@
   justify-content: space-between;
   padding: 24px;
   gap: 20px;
-
-  box-shadow: 3px 3px 10px #777;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12)
 }
 
 .project-icon {
@@ -385,9 +500,10 @@
   height: 33px;
   font-size: 14px;
   padding: 0 15px;
-  border: 1px solid #777;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   background-color: rgb(128, 128, 128, 0.1);
 }
 
@@ -417,6 +533,10 @@
   padding: 20px;
   font-size: 14px;
   line-height: 1.8;
+}
+
+.project-detail-headline {
+  font-size: 15px;
 }
 
 .project-detail li {
@@ -450,4 +570,191 @@
   font-size: 13px;
   padding: 4px 10px;
   border-radius: 20px;
+}
+
+/* 모바일 콜렙스 메뉴 시작 */
+
+/* 반응형 collaps */
+.header-contact-collaps {
+
+  display: none;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.header-contact-collaps:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* header-moblie 추가 */
+
+.header-mobile {
+  display: none;
+  position: relative;
+}
+
+.header-contact-collaps {
+
+  border: none;
+  background: transparent;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  transition: background 0.3s ease;
+}
+
+.header-contact-collaps:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* 드롭다운 메뉴 */
+
+.mobile-dropdown {
+
+  position: absolute;
+
+  top: 60px;
+  right: 0;
+
+  width: 220px;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  padding: 10px;
+
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 드롭다운 링크 스타일 */
+.mobile-dropdown a {
+
+  padding: 12px;
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+  word-break: break-all;
+}
+
+.mobile-dropdown a:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.mobile-dropdown.active {
+  display: flex;
+}
+
+/* 모바일 콜렙스 메뉴 끝 */
+
+@media (max-width:768px) {
+  .header-contact {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+
+  .header-contact-collaps {
+    display: block;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+  }
+
+  .profile-img {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-title {
+    text-align: center;
+  }
+
+  .profile-text {
+    margin-left: 0px;
+  }
+
+  .about-list {
+    margin-left: 0px;
+  }
+
+  .skill-title {
+    text-align: center;
+  }
+
+  .skill-inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-title {
+    text-align: center;
+  }
+
+  .project-inner {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .project-description {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .project-skill {
+    gap: 2px;
+  }
+
+  .project-skill p {
+    padding: 0 5px;
+  }
+
+  .project-title {
+    width: 100%;
+    max-width: 500px;
+  }
+
 }
