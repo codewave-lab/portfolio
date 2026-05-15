@@ -152,6 +152,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+  font-size: 1.7rem;
 }
 
 
@@ -333,6 +335,9 @@
 .profile-text {
   margin-left: 30px;
   margin-bottom: 70px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
 }
 
 /* skill */
@@ -391,6 +396,8 @@
   background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
+  
+  font-size: 1.5rem;
 }
 
 .skill-tool {
@@ -417,6 +424,8 @@
   background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
+
+  font-size: 1.5rem;
 }
 
 /* exp */
@@ -429,6 +438,11 @@
 .exp-title {
   font-size: 25px;
   margin-bottom: 15px;
+}
+
+.exp p {
+  font-size: 1.5rem;
+
 }
 
 /* project */
@@ -459,7 +473,8 @@
   justify-content: space-between;
   padding: 24px;
   gap: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12)
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12);
+  
 }
 
 .project-icon {
@@ -475,6 +490,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.project-headline {
+   font-size: 1.5rem;
+
 }
 
 .project-name {
@@ -526,6 +546,8 @@
   border: 1px solid #777;
   border-radius: 5px;
   padding: 0 25px;
+
+  font-size: 1.5rem;
 }
 
 .project-detail {
@@ -664,11 +686,34 @@
 
 .mobile-dropdown.active {
   display: flex;
+  width: 170px;
+}
+
+.mobile-dropdown.active a {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-dropdown a:nth-child(2) {
+  background-color: rgb(221, 221, 221, 0.4);
+
 }
 
 /* 모바일 콜렙스 메뉴 끝 */
 
+/* 반응형 미디어 쿼리 시작 */
+
+
+
 @media (max-width:768px) {
+  html {
+    font-size: 15px;
+  }
+  .header-title p {
+    font-size: 1.5rem;
+  
+  }
   .header-contact {
     display: none;
   }
@@ -681,49 +726,102 @@
     display: block;
   }
 
+  .header-name {
+    font-size: 2.0rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
   .hero {
     width: 100%;
     max-width: 480px;
+    margin-top: 220px;
   }
 
   .hero h1 {
-    font-size: 70px;
+    font-size: 4.0rem;
+  }
+
+  .hero-text {
+    font-size: 1.3rem;
+  }
+
+  .scroll {
+    margin-bottom: 120px;
+
   }
 
   .profile-img {
     margin-right: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 70px;
   }
 
   .profile-title {
     text-align: center;
+    font-size: 4.0rem;
+    margin-bottom: 30px;
   }
 
   .profile-text {
     margin-left: 0px;
+    font-size: 1.6rem;
+    line-height: 25px;
   }
 
   .about-list {
     margin-left: 0px;
   }
 
-  .skill-title {
-    text-align: center;
+  .skill-list {
+    width: 100%;
+    max-width: 500px;
   }
 
-  .skill-inner{
+  .skill-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .skill-inner {
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .skill-lang-list {
+    gap: 5px;
+  }
+
+  .skill-lang-list p {
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+
+  .skill-tool-list {
+    gap: 5px;
+  }
+
+  .skill-tool-list p {
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+
+  .exp p {
+    font-size: 1.5rem;
+  }
+
   .project-title {
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .project-inner {
@@ -736,12 +834,17 @@
   .project-content {
     flex-direction: column;
     width: 100%;
-    max-width: 480px;
+    max-width: 500px;
+    margin-bottom: 70px;
   }
 
   .project-description {
     width: 100%;
     gap: 10px;
+  }
+
+  .project-headline {
+    font-size: 1.5rem;
   }
 
   .project-skill {
@@ -750,6 +853,8 @@
 
   .project-skill p {
     padding: 0 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 
   .project-title {
@@ -757,4 +862,14 @@
     max-width: 500px;
   }
 
+  .mail-adress {
+    background-color: rgb(127, 255, 212, 0.3);
+  }
+
+}
+
+@media (max-width: 410px) {
+  html {
+    font-size: 10px;
+  }
 }
