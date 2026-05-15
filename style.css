@@ -747,6 +747,7 @@
 
   .hero-text {
     font-size: 1.3rem;
+    margin-bottom: 0;
   }
 
   .scroll {
