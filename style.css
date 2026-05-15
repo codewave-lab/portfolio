@@ -396,7 +396,7 @@
   background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
-  
+
   font-size: 1.5rem;
 }
 
@@ -474,7 +474,7 @@
   padding: 24px;
   gap: 20px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12);
-  
+
 }
 
 .project-icon {
@@ -493,7 +493,7 @@
 }
 
 .project-headline {
-   font-size: 1.5rem;
+  font-size: 1.5rem;
 
 }
 
@@ -706,14 +706,16 @@
 
 
 
-@media (max-width:768px) {
+@media (max-width:770px) {
   html {
     font-size: 15px;
   }
+
   .header-title p {
     font-size: 1.5rem;
-  
+
   }
+
   .header-contact {
     display: none;
   }
@@ -763,6 +765,7 @@
   .profile {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     margin-bottom: 70px;
   }
@@ -774,6 +777,7 @@
   }
 
   .profile-text {
+    padding: 0 20px;
     margin-left: 0px;
     font-size: 1.6rem;
     line-height: 25px;
@@ -781,6 +785,7 @@
 
   .about-list {
     margin-left: 0px;
+    padding: 0 20px;
   }
 
   .skill-list {
@@ -869,7 +874,7 @@
 
 }
 
-@media (max-width: 410px) {
+@media (max-width: 481px) {
   html {
     font-size: 10px;
   }
