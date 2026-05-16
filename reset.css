@@ -2,10 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: 'Paperozi';
-
-  scroll-behavior: smooth;
 }
 
 .inner {
@@ -30,5 +26,10 @@ body {
 }
 
 html {
-  font-size: 10px;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Paperozi';
 }

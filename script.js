@@ -17,11 +17,13 @@ window.addEventListener("scroll", () => {
 const menuButton = document.querySelector(".header-contact-collaps");
 const mobileDropdown = document.querySelector(".mobile-dropdown");
 
-menuButton.addEventListener("click", () => {
+if(menuButton) {
+  menuButton.addEventListener("click", () => {
 
   mobileDropdown.classList.toggle("active");
 
-});
+  });
+}
 
 /* 모바일 메뉴 누르면 자동으로 닫히는 */
 
