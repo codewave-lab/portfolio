@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98">
+  <defs>
+    <linearGradient id="main-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3D87A" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    
+    <path id="back-peak" d="M15 75 L49 30 L83 75 Z" />
+  </defs>
+
+  <rect width="98" height="98" rx="22" fill="#0B0B0B" stroke="#D4AF37" stroke-width="1"/>
+
+  <use href="#back-peak" fill="#222222" opacity="0.6"/>
+
+  <g fill="url(#main-gold)" font-family="Helvetica Neue, Arial, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-1">
+    
+    <text x="49" y="47" font-size="24">IRON</text>
+    
+    <text x="49" y="73" font-size="24">PEAK</text>
+  </g>
+  
+  <path d="M57 58 L61.5 53 L66 58 Z" fill="#F3D87A"/>
+</svg>
