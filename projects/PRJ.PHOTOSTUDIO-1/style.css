@@ -1,0 +1,307 @@
+body {
+  font-family: 'Paperozi', sans-serif;
+}
+
+/* 헤더 파트 시작 */
+
+.header {
+  background-color: white;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+
+  position: relative;
+  z-index: 100
+}
+
+.logo {
+  font-family: 'Cafe24Danjeonghae', sans-serif;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.gnb {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.gnb button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: black;
+  color: aliceblue;
+  font-weight: 700;
+
+}
+
+.header-mobile-collapse {
+  line-height: 1;
+  font-size: 3rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 메인 파트 시작 */
+
+.main-inner {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* 히어로 섹션 시작 */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 140rem;
+  position: relative;
+
+}
+
+
+.hero-content img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  position: absolute;
+
+  /* 기준 위치 */
+  top: 40%;
+  left: 8%;
+
+  /* 자기 자신의 절반만 이동 */
+  transform: translateY(-50%);
+
+  width: 100%;
+  max-width: 43rem;
+}
+
+.hero-text-mobile {
+  display: none;
+}
+
+
+.hero-content h1 {
+  font-size: clamp(2rem, 2vw, 3.3rem);
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  max-width: 32rem;
+}
+
+.hero-text a {
+  background-color: #000;
+  color: rgb(240, 248, 255);
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+/* 어바웃 섹션 시작 */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 4rem;
+
+}
+
+.about h2 {
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* 서비스 섹션 시작 */
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 4rem 0;
+  border-top: 1px solid #e5e5e5;
+
+}
+
+.service-list {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+
+}
+
+.service-list-card {
+  flex: 1;
+  max-width: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  gap: 1rem;
+}
+
+.icon-service {
+  font-size: 3rem;
+}
+
+.service h2 {
+  font-size: 2rem;
+}
+
+.service h3 {
+  font-size: 1.7rem;
+}
+
+.service p {
+  font-size: 1.6rem;
+}
+
+/* 프로젝트 섹션 시작 */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 4rem 0;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.project h2 {
+  font-size: 2rem;
+}
+
+.project-list {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.project-list p {
+  font-size: 1.6rem;
+}
+
+.project-list-card {
+  flex: 1;
+  max-width: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  gap: 1rem;
+}
+
+.project-list-img {
+  width: 100%;
+  max-width: 20rem;
+  max-height: 20rem;
+  border-radius: 15px;
+}
+
+/* 컨택트 섹션 시작 */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  padding: 4rem 0;
+  border-top: 1px solid #e5e5e5;
+
+}
+
+.contact h2 {
+  font-size: 2rem;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+
+}
+
+.contact-list button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: black;
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.contact-list-card {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-list-card p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.icon-contact {
+  font-size: 1.7rem;
+}
+
+/* 푸터 시작 */
+
+.footer {
+  background-color: #000;
+  color: #e5e5e5;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding-block: 2rem;
+
+  letter-spacing: 0.2rem;
+}

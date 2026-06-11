@@ -1,0 +1,160 @@
+.header-mobile {
+  display: none;
+  position: relative;
+  align-items: center;
+}
+
+/* 1024p 작은노트북 대응 */
+@media (max-width:1024px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 768p 태블릿 대응 */
+
+@media (max-width:768px) {
+  html {
+    font-size: 57.5%;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .service-list-card {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .project-list-card {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .icon {
+    font-size: 5rem;
+  }
+
+  .contact-list p {
+    font-size: 1.5rem;
+  }
+}
+
+/* 630p 상단 GNB 콜랩스 전환 */
+
+@media (max-width:630px) {
+
+  /* 여기에 상단 gnb바 메뉴들 콜랩스 예정 */
+
+  .gnb-pc {
+    display: none;
+  }
+
+  .gnb-mobile {
+    min-width: 13rem;
+
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    top: 100%;
+    right: 0;
+
+    z-index: 100;
+  }
+
+  .header-mobile {
+    display: flex;
+  }
+
+  .gnb-mobile.show {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+
+    border-radius: 15px;
+  }
+
+}
+
+/* 480p 모바일 대응 */
+
+@media (max-width:480px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+
+
+  .hero-text {
+    position: static;
+    transform: none;
+    margin-top: 5rem;
+
+    align-items: center;
+    gap: 3rem;
+
+    width: 100%;
+    max-width: 100%;
+
+  }
+
+  .hero-text p {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    display: none;
+  }
+
+  .hero-text-mobile {
+    display: block;
+    position: absolute;
+    top: 13%;
+    left: 5%;
+  }
+
+  .service-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-list-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-list-img {
+    width: 100%;
+    max-width: 30rem;
+    max-height: none;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+  }
+
+  .contact-list i {
+    font-size: 2.5rem;
+  }
+
+  .contact-list p {
+    font-size: 1.4rem;
+  }
+
+}
