@@ -1,8 +1,0 @@
-Hero 퀄 올리는 법
-spacing(여백) 감각
-section 구조화
-Swiper
-GSAP 살짝
-CTA 설계
-고급 느낌 나는 카드 UI
-실제 외주 랜딩 흐름
