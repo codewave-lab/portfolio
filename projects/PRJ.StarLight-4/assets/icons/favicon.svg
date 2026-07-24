@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <defs>
+    <!-- 트렌디한 퍼플 그라데이션 -->
+    <linearGradient id="faviconGradient" x1="2" y1="2" x2="32" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" />
+      <stop offset="1" stop-color="#C084FC" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 메인 별빛 -->
+  <path d="M16 2C16 9.73 22.27 16 30 16C22.27 16 16 22.27 16 30C16 22.27 9.73 16 2 16C9.73 16 16 9.73 16 2Z" fill="url(#faviconGradient)"/>
+  
+  <!-- 흩날리는 작은 별빛 (Twinkle) -->
+  <path d="M28 4C28 6.21 29.79 8 32 8C29.79 8 28 9.79 28 12C28 9.79 26.21 8 24 8C26.21 8 28 6.21 28 4Z" fill="#C084FC"/>
+</svg>

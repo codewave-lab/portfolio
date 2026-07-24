@@ -1,0 +1,87 @@
+/* =========================================================
+   CSS RESET
+   브라우저 기본 스타일 통일
+========================================================= */
+
+
+/* 모든 요소 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* rem 계산 및 전역 스크롤 설정 */
+html {
+
+  /* 1rem = 10px */
+  font-size: 62.5%;
+
+  /* 앵커 이동 시 부드러운 스크롤 */
+  /* scroll-behavior: smooth;  이 버전에선 사용안함 */
+
+  /* sticky header 앵커 가림 방지 */
+  scroll-padding-top: 7rem;
+
+  /* 폰트 렌더링 최적화 */
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* 전역 레이아웃 설정 */
+body {
+
+  /* 가로 스크롤 강제 제거 (필요 시 사용) */
+  /* overflow-x: hidden; */
+
+  /* 최소 화면 높이 확보 */
+  min-height: 100vh;
+
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* 리스트 기본 마커 제거 */
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* 폼 요소 폰트 상속 */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* 기울임 스타일 초기화 */
+i,
+em {
+  font-style: normal;
+}
+
+
+/* 미디어 요소 기본 설정 */
+img,
+picture,
+video,
+canvas,
+svg {
+
+  /* 하단 공백 제거 */
+  display: block;
+
+  /* 부모 영역 초과 방지 */
+  max-width: 100%;
+}

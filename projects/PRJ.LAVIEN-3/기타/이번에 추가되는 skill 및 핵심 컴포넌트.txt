@@ -1,0 +1,60 @@
+이번 프로젝트에서 가장 중요하게 설계한 요소는
+컴포넌트 자체보다 디자인 시스템이었다.
+
+컬러, 타이포그래피, Spacing Rule,
+Section Layout을 토큰화하여
+랜딩페이지 전체가 하나의 규칙 안에서 동작하도록 구성했다.
+
+덕분에 새로운 섹션 추가나
+브랜드 확장 시에도 일관된 경험을 제공할 수 있는
+기반을 마련할 수 있었다.
+
+
+Tech Stack
+
+HTML5
+CSS3
+JavaScript (ES6+)
+
+
+core Implementation 핵심 구현 내용
+
+CSS Custom Properties
+Fluid Typography
+Clamp-based Responsive Scaling
+Design Token Architecture
+Mobile-First Layout
+
+
+Design System
+
+• CSS Custom Properties 기반 토큰 시스템 구축
+• clamp()를 활용한 Fluid Typography 적용
+• Breakpoint 의존도를 줄인 유동형 레이아웃 설계
+• Spacing Scale 일관화
+• Semantic Color Token 적용
+
+
+Core Architecture
+
+Token-Based Design System
+Fluid Responsive Scaling
+Semantic CSS Architecture
+Component-Driven UI
+
+
+기술적 특징
+
+• CSS Custom Properties 기반 Design Token 설계
+• clamp()를 활용한 Fluid Typography
+• 반응형 레이아웃 구축
+• CSS Grid/Flexbox 레이아웃 시스템
+• 재사용 가능한 UI 컴포넌트 설계
+
+
+핵심 구현 사항
+
+• Design Token System 구축
+• Fluid Scale Typography 적용
+• Semantic CSS Architecture 설계
+• Component 기반 UI 구조화

@@ -1,0 +1,350 @@
+/* 반응형 @media 시작 */
+
+/* 1180px 브레이크 포인트 */
+/* 상단 네비메뉴 햄버거 메뉴로 전환 */
+
+@media (max-width:1180px) {
+
+  html {
+    font-size: 56.25%;
+  }
+
+  /* 햄버거 메뉴 준비 */
+  .gnb {
+    display: none;
+  }
+
+  .header-side-wrap>.cta-button {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .gnb.active {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 7rem;
+    right: 0;
+
+    width: 250px;
+
+    background: #111;
+    border: 1px solid #333;
+
+    padding: 20px;
+    z-index: var(--z-overlay);
+  }
+
+
+  /* 히어로 섹션 배열 재설정 */
+
+  .hero-left-text {
+    display: none;
+  }
+
+  .hero-stats {
+    display: none;
+  }
+
+  .hero-text {
+    left: 2%;
+  }
+
+  .hero-img {
+    margin-bottom: 0;
+  }
+
+
+  /* 어바웃 반응형 */
+
+  .about-img-wrap {
+    max-width: 30rem;
+  }
+
+  .about-inner {
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  .about-img-wrap {
+    background-color: transparent;
+  }
+}
+
+
+
+/* 1075px 브레이크 포인트 */
+/* 카드배열 3->2개로 */
+
+
+@media (max-width:1075px) {
+
+  .logo {
+    margin: 0;
+  }
+
+  .section-inner-common {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(4rem, 8vw, 12rem);
+  }
+
+  .headline-common {
+    margin: 0;
+    width: 18rem;
+    flex-shrink: 0;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .about-img-wrap {
+    display: none;
+  }
+
+  .about-inner {
+    border: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(4rem, 8vw, 12rem);
+    margin-block: 8rem;
+
+  }
+
+  .about-text-card1 {
+    padding: 0;
+    max-width: 18rem;
+
+  }
+
+  .about-text-card2 {
+    padding: 0;
+    width: 252px;
+    border: none;
+  }
+
+  .program-card-wrap {
+    flex-direction: column;
+    margin: 0;
+    max-width: 28rem;
+  }
+
+  .before-card-wrap {
+    flex-direction: column;
+    margin: 0;
+    max-width: 28rem;
+  }
+
+  .review-card-wrap {
+    flex-direction: column;
+    margin: 0;
+    max-width: 28rem;
+  }
+
+  .pricing-card-wrap {
+    flex-direction: column;
+    margin: 0;
+    max-width: 28rem;
+  }
+
+  .location-content-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    max-width: 28rem;
+  }
+
+  .footer {
+    justify-content: center;
+    gap: var(--space-20);
+  }
+
+  .footer-logo {
+    margin: 0;
+  }
+
+  .contact-icon {
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-nav-wrap {
+    justify-content: center;
+  }
+
+}
+
+
+/* 500px 브레이크 포인트 */
+/* 카드배열 2->1개로 */
+
+@media (max-width:500px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: var(--text-h3);
+  }
+
+  .about-card-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-img-wrap {
+    display: block;
+    max-width: 100px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .about-inner {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .about-img {
+    display: block;
+
+  }
+
+  .about-text-card1 {
+    max-width: 220px;
+  }
+
+  .about-text-card2 {
+    width: 100%;
+    align-items: center;
+
+    display: none;
+  }
+
+  .section-inner-common {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-inner {
+    width: 100%;
+  }
+
+  .program-headline {
+    width: 100%;
+  }
+
+  .headline-common {
+    width: 100%;
+    align-items: center;
+  }
+
+  .headline-common p:nth-of-type(1) {
+    display: none;
+  }
+
+  .headline-common p:nth-of-type(2) {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: var(--text-xl);
+    justify-content: center;
+  }
+
+  .program-card {
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+
+  .program-card-wrap {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .program-detail p {
+    display: none;
+  }
+
+   .program-detail h3 {
+    text-align: center;
+  }
+
+
+  .before-card-wrap {
+    max-width: 500px;
+  }
+
+
+
+  .before-img {
+    max-width: 500px;
+  }
+
+  .review-card-wrap {
+    max-width: 500px;
+  }
+
+  .review-card {
+    max-width: 500px;
+    align-items: center;
+  }
+
+  .medal-1 {
+    display: none;
+  }
+
+
+  .pricing-card-wrap {
+    max-width: 500px;
+  }
+
+  .pricing-card {
+    max-width: 500px;
+    background-color: var(--color-border);
+  }
+
+  .pricing-card-major {
+    max-width: 500px;
+  }
+
+  .location-content-wrap {
+    max-width: 500px;
+    align-items: center;
+  }
+
+
+  .location-text {
+    max-width: 500px;
+    align-items: center;
+  }
+
+  .footer-nav-wrap p:nth-of-type(1) {
+    display: none;
+  }
+
+}

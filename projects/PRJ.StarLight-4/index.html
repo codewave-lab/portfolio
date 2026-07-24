@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starlightcheck-in</title>
+
+  <!-- 성능 최적화: 외부 리소스 사전 연결 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet"
+    type="text/css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="[별빛체크인] 오늘 밤, 당신의 일상에 별빛을 체크인하세요." />
+  <meta property="og:description" content="에디터가 엄선한 완벽한 휴식 공간. 지금 바로 가장 반짝이는 펜션을 예약해 보세요." />
+  <meta property="og:image" content="assets/images/OG_image.webp" />
+  <meta property="og:url" content="index.html" />
+  <script type="module" crossorigin src="./assets/main-CtbIWD6j.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-BrCZMi-e.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+             icon preload PART (최신 트렌드 아이콘으로 교체됨)
+      ========================================== -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <!-- 기본 UI 아이콘 -->
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M3.75 5h16.5M3.75 12h16.5M3.75 19h16.5" />
+    </symbol>
+    <symbol id="icon-clock" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </symbol>
+    <symbol id="icon-star" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+    </symbol>
+    <symbol id="icon-map_pin" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </symbol>
+    <symbol id="icon-calendar" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+    </symbol>
+    <symbol id="icon-users" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+    </symbol>
+    <!-- 찜하기(하트) 아이콘: 숙소 카드 컴포넌트(main.js)의 찜하기 버튼에서 <use>로 재사용 -->
+    <symbol id="icon-heart" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    </symbol>
+
+    <!-- ===================================== -->
+    <!-- 카테고리 전용 트렌디 3D 아이콘 내부 선형 패스 -->
+    <!-- (선 두께 stroke-width="2", 둥근 끝마감 추가로 더욱 깔끔하게) -->
+    <!-- ===================================== -->
+
+    <!-- 1. 펜션 (아늑하고 모던한 집) -->
+    <symbol id="icon-house" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </symbol>
+
+    <!-- 2. 호텔/리조트 (다층 빌딩) -->
+    <symbol id="icon-hotel" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+      <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+      <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+      <path d="M10 6h4" />
+      <path d="M10 10h4" />
+      <path d="M10 14h4" />
+      <path d="M10 18h4" />
+    </symbol>
+
+    <!-- 3. 캠핑/글램핑 (직관적인 텐트) -->
+    <symbol id="icon-fire" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M3.5 21 14 3" />
+      <path d="M20.5 21 10 3" />
+      <path d="M15.5 21 12 15l-3.5 6" />
+      <path d="M2 21h20" />
+    </symbol>
+
+    <!-- 4. 풀빌라 (코코넛 열매가 달린 완벽한 야자수 🌴🥥) -->
+    <symbol id="icon-fullvilla" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <!-- 바닥 지면 -->
+      <path d="M4 21h16" />
+      <!-- 야자수 기둥 (살짝 휜 감성적인 라인) -->
+      <path d="M12 21c2-4 2-10 0-14" />
+
+      <!-- 코코넛 열매 2알 🥥 (여기가 핵심 포인트!) -->
+      <circle cx="9.5" cy="8.5" r="1.5" />
+      <circle cx="14.5" cy="8.5" r="1.5" />
+
+      <!-- 좌상단 잎사귀 -->
+      <path d="M12 7c-3-2-7-1-9 1" />
+      <!-- 우상단 잎사귀 -->
+      <path d="M12 7c3-2 7-1 9 1" />
+      <!-- 좌하단 잎사귀 -->
+      <path d="M12 7c-4 1-7 4-8 7" />
+      <!-- 우하단 잎사귀 -->
+      <path d="M12 7c4 1 7 4 8 7" />
+    </symbol>
+
+    <!-- 5. 반려동물 (귀여운 강아지/고양이 얼굴 🐱🐶) -->
+    <symbol id="icon-animal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.48C21 17.9 16.97 21 12 21s-9-3.1-9-7.48c0-1.24.43-2.41 1-3.48 0 0-1.82-6.42-.42-7 1.39-.58 4.64.26 6.42 2.26C10.65 5.09 11.33 5 12 5Z" />
+      <path d="M9 13h.01" />
+      <path d="M15 13h.01" />
+      <path d="M12 16v-1" />
+      <path d="M10 16c0 .5.5 1 2 1s2-.5 2-1" />
+    </symbol>
+
+    <!-- 6. 키즈 (친근한 스마일 얼굴 😊) -->
+    <symbol id="icon-kids" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+      <line x1="9" y1="9" x2="9.01" y2="9" />
+      <line x1="15" y1="9" x2="15.01" y2="9" />
+    </symbol>
+  </svg>
+
+  <div class="wrap w-full min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- ==========================================
+             header 섹션
+             ========================================== -->
+    <header class="h-20 w-full bg-white border-b border-gray-100 flex items-center">
+      <div class="max-w-300 mx-auto px-5 w-full flex justify-between items-center">
+        <div class="w-full max-w-150 flex items-center ">
+          <a href="#" class="shrink-0">
+            <img src="assets/images/별빛체크인로고svg.svg" alt="별빛체크인 로고" class="h-8" />
+          </a>
+          <div
+            class="w-full flex items-center bg-surface-muted rounded-full px-4 py-2 mr-4 border border-gray-200 focus-within:border-starry focus-within:bg-white transition-colors">
+            <svg class="shrink-0 w-5 h-5 text-ink-400">
+              <use href="#icon-search"></use>
+            </svg>
+            <input type="text" id="mainPcSearchInput" placeholder="지역, 숙소명 검색" autocomplete="off"
+              class="bg-transparent border-none outline-none ml-2 text-sm text-ink-900 placeholder:text-ink-400 w-full max-[450px]:placeholder:text-transparent" />
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="pages/login.html"
+            class="text-sm font-semibold text-ink-900 hover:text-starry hover:bg-purple-100 transition-colors border rounded-full border-gray-200 px-4 py-2 hidden min-[870px]:block">로그인/회원가입</a>
+          <div class="flex items-center gap-4 text-ink-900">
+            <button id="menuOpenBtn" class="hover:text-starry hover:bg-purple-100 cursor-pointer transition-colors"
+              aria-label="전체메뉴">
+              <svg class="w-6 h-6">
+                <use href="#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1920px] w-full mx-auto flex flex-col items-center">
+
+      <!-- ==========================================
+             HERO 섹션
+             ========================================== -->
+      <!-- 👇 bg-[url(...)] 클래스를 빼고 style="background-image: url('./assets/...')" 속성을 추가했습니다. -->
+      <section id="hero" style="background-image: url('./assets/images/hero-background.webp');"
+        class="relative w-full h-90 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center">
+        <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-800/50"></div>
+        <div class="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
+        <div class="absolute inset-0 opacity-20 z-base"></div>
+
+        <div class="relative text-white flex flex-col items-center justify-center gap-3 z-10">
+          <div
+            class="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-lg text-white font-semibold text-xs">
+            <svg class="w-3.5 h-3.5 text-white">
+              <use href="#icon-star"></use>
+            </svg>
+            <span>PREMIUM</span>
+          </div>
+          <h1 class="text-[clamp(1.7rem,2.1vw,2.7rem)] font-bold">별빛체크인과 함께하는 여행</h1>
+          <h2 class="font-extralight mb-6">특별한 숙소를 특별한 가격으로</h2>
+        </div>
+
+        <div
+          class="relative z-10 w-[92%] sm:w-full max-w-173.5 h-12 md:h-12.5 bg-white rounded-full flex items-center shadow-floating mb-6 pl-0 pr-1 md:pr-2">
+
+          <!-- 1. 전국 어디든 (부모의 왼쪽 패딩을 없애고 버튼 자체 패딩을 늘려 곡률을 완벽히 일치시킴) -->
+          <button type="button"
+            class="flex-1 h-full flex justify-center items-center gap-1 md:gap-3 pl-4 md:pl-6 pr-1 md:pr-4 hover:bg-purple-100 rounded-full transition-colors cursor-pointer overflow-hidden">
+            <svg class="w-4 h-4 md:w-5 md:h-5 text-ink-900 shrink-0">
+              <use href="#icon-map_pin"></use>
+            </svg>
+            <span class="text-ink-900 font-semibold text-[11px] sm:text-sm md:text-base whitespace-nowrap truncate">전국
+              어디든</span>
+          </button>
+
+          <div class="h-4 md:h-5 w-px bg-gray-200 shrink-0"></div>
+
+          <!-- 2. 날짜 선택 -->
+          <button type="button"
+            class="flex-1 h-full flex justify-center items-center gap-1 md:gap-3 px-1 md:px-4 hover:bg-purple-100 rounded-full transition-colors cursor-pointer overflow-hidden">
+            <svg class="w-4 h-4 md:w-5 md:h-5 text-ink-900 shrink-0">
+              <use href="#icon-calendar"></use>
+            </svg>
+            <span class="text-ink-900 font-semibold text-[11px] sm:text-sm md:text-base whitespace-nowrap truncate">날짜
+              선택</span>
+          </button>
+
+          <div class="h-4 md:h-5 w-px bg-gray-200 shrink-0"></div>
+
+          <!-- 3. 성인 2명 -->
+          <button type="button"
+            class="flex-1 h-full flex justify-center items-center gap-1 md:gap-3 px-1 md:px-4 hover:bg-purple-100 rounded-full transition-colors cursor-pointer overflow-hidden">
+            <svg class="w-4 h-4 md:w-5 md:h-5 text-ink-900 shrink-0">
+              <use href="#icon-user"></use>
+            </svg>
+            <span class="text-ink-900 font-semibold text-[11px] sm:text-sm md:text-base whitespace-nowrap truncate">성인
+              2명</span>
+          </button>
+
+          <!-- 4. 검색 버튼 -->
+          <button type="button"
+            class="flex items-center justify-center text-white transition-all shadow-md font-semibold touch-manipulation active:scale-95 mx-1 md:mr-1 md:ml-2 gap-1.5 px-3 h-8 md:px-5 md:h-10 text-sm rounded-full bg-starry hover:bg-starry-hover cursor-pointer shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+              </path>
+            </svg>
+            <span class="hidden">검색</span>
+          </button>
+
+        </div>
+
+        <div class="z-10 flex flex-wrap justify-center items-center gap-2 px-4 max-w-2xl">
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">가평</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">경기/인천</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">강원</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">충청도</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">전라도</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">경상도</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">제주</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">부산/울산/대구</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">대전/광주</a>
+          <a href="#"
+            class="text-center bg-white/20 backdrop-blur-sm text-white border border-white/30 text-[11px] sm:text-xs font-medium rounded-2xl px-2.5 py-1 hover:bg-purple-100 hover:text-ink-900 transition-colors">서울</a>
+        </div>
+      </section>
+
+      <div class="main-inner max-w-7xl w-full mx-auto">
+
+        <!-- ==========================================
+             카테고리 섹션 (트렌디 3D 입체 디자인) - [수정] utility 클래스로 인라인 스타일 제거
+             ========================================== -->
+        <section id="category" class="w-full py-8 md:py-16 bg-white border-b border-gray-100">
+          <ul
+            class="px-4 mx-auto max-w-[1000px] flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 max-[520px]:grid max-[520px]:grid-cols-3 max-[520px]:gap-y-6 max-[520px]:gap-x-2">
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-pension group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-house"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">펜션</span>
+              </a>
+            </li>
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-hotel group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-hotel"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">호텔/리조트</span>
+              </a>
+            </li>
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-camping group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-fire"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">캠핑/글램핑</span>
+              </a>
+            </li>
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-poolvilla group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-fullvilla"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">풀빌라</span>
+              </a>
+            </li>
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-pet group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-animal"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">반려동물</span>
+              </a>
+            </li>
+
+            <li class="text-center group shrink-0 max-[520px]:justify-self-center">
+              <a href="#" class="group flex flex-col items-center gap-3 md:gap-4 transition-all cursor-pointer">
+                <div class="category-icon category-kids group-hover:-translate-y-1.5 group-hover:scale-105">
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-sm">
+                    <use href="#icon-kids"></use>
+                  </svg>
+                </div>
+                <span
+                  class="text-sm md:text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">키즈</span>
+              </a>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- ==========================================
+             🎉 이벤트 배너 슬라이더 섹션
+             ========================================== -->
+        <section id="event-slider" class="w-full py-8 md:py-12 bg-white relative">
+          <div class="px-4 mx-auto max-w-7xl relative group/slider">
+            <div class="flex justify-between items-end mb-6">
+              <div class="flex flex-col">
+                <h2 class="text-xl md:text-2xl font-bold text-ink-900">#별빛체크인 특별한 이유</h2>
+                <p class="text-ink-600 text-sm mt-1">오직 여기서만 만날 수 있는 특별한 혜택</p>
+              </div>
+              <a href="#"
+                class="hidden sm:flex items-center text-xs md:text-sm font-medium text-ink-600 border border-gray-200 rounded-full px-3 py-1.5 md:px-4 md:py-2 hover:bg-purple-100 transition-colors">
+                전체 혜택 보기
+                <svg class="w-3 h-3 md:w-3.5 md:h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="swiper eventSwiper !overflow-visible md:!overflow-hidden">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_1.png" alt="이벤트 배너 1"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_2.png" alt="이벤트 배너 2"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_3.png" alt="이벤트 배너 3" loading="lazy" decoding="async"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_4.png" alt="이벤트 배너 4" loading="lazy" decoding="async"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_5.jpg" alt="이벤트 배너 5" loading="lazy" decoding="async"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    class="block relative w-full aspect-[394/216] rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/EventBanner/banner_6.jpg" alt="이벤트 배너 6" loading="lazy" decoding="async"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 커스텀 좌우 네비게이션 화살표 -->
+            <div
+              class="event-button-prev absolute left-0 top-[60%] -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 text-ink-900 hover:text-starry hover:bg-purple-100 hover:scale-110 cursor-pointer transition-all -ml-5 opacity-0 group-hover/slider:opacity-100">
+              <svg class="w-5 h-5 md:w-6 md:h-6 pr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </div>
+            <div
+              class="event-button-next absolute right-0 top-[60%] -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 text-ink-900 hover:text-starry hover:bg-purple-100 hover:scale-110 cursor-pointer transition-all -mr-5 opacity-0 group-hover/slider:opacity-100">
+              <svg class="w-5 h-5 md:w-6 md:h-6 pl-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==========================================
+             이벤트 섹션 2 one card
+             ========================================== -->
+        <section id="event" class="w-full py-6 md:py-10 hidden sm:block">
+          <div class="px-4 mx-auto max-w-7xl">
+            <a href="#"
+              class="block relative w-full rounded-bento overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+              <img src="assets/images/event_banner.webp" alt="숙박세일 페스타 이벤트" loading="lazy" decoding="async"
+                class="w-full h-auto object-cover block" />
+              <div class="absolute inset-0 flex items-center justify-end px-6 md:px-12 pointer-events-none">
+                <div
+                  class="hidden sm:flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-sm text-ink-900 group-hover:bg-starry group-hover:text-white transition-colors pointer-events-auto">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             추천 숙소 섹션
+             ========================================== -->
+        <section id="recommand" class="w-full py-8">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-6">
+              <div>
+                <h2 class="text-xl md:text-2xl font-bold text-ink-900">지금 떠나기 좋은 숙소</h2>
+                <p class="text-ink-600 text-sm mt-1 hidden sm:block">에디터가 엄선한 이번 주 추천 스팟</p>
+              </div>
+              <a href="#" class="text-sm font-semibold text-starry hover:text-starry-hover transition-colors">전체보기
+                &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-card-grid="recommand">
+              <!-- 카드는 main.js의 ACCOMMODATION_SECTIONS.recommand 데이터를 기반으로 렌더링됩니다 (createAccommodationCard 참고) -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             숏츠 shots Slider 섹션
+             ========================================== -->
+        <section id="shots" class="w-full py-8 overflow-hidden">
+          <div class="px-4 mx-auto max-w-7xl">
+            <h2 class="text-xl md:text-2xl font-bold text-ink-900 mb-6">생생한 숙소 숏폼</h2>
+
+            <div class="swiper mySwiper !overflow-visible">
+              <div class="swiper-wrapper">
+                <!-- 숏츠 1: 밤바다 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/1.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">여수 밤바다 뷰 미쳤다 🌙</p>
+                    <p class="text-white/80 text-xs mt-1">@night_ocean</p>
+                  </div>
+                </a>
+                <!-- 숏츠 2: 반려견 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/2.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">댕댕이와 함께하는 가평 여행 🐶</p>
+                    <p class="text-white/80 text-xs mt-1">@puppy_travel</p>
+                  </div>
+                </a>
+                <!-- 숏츠 3: 휴양지/오션뷰 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/3.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">발리 안 부러운 프라이빗 비치 🌴</p>
+                    <p class="text-white/80 text-xs mt-1">@vacation_mood</p>
+                  </div>
+                </a>
+                <!-- 숏츠 4: 골프 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/4.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">럭셔리 골프 리조트 라운딩 ⛳</p>
+                    <p class="text-white/80 text-xs mt-1">@golf_life</p>
+                  </div>
+                </a>
+                <!-- 숏츠 5: 글램핑 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/5.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">로맨틱하고 뜨거운 추억여행 🔥</p>
+                    <p class="text-white/80 text-xs mt-1">@camping_pro</p>
+                  </div>
+                </a>
+                <!-- 숏츠 6: 풀빌라 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/6.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">인생샷 보장 인피니티 풀 🏊‍♀️</p>
+                    <p class="text-white/80 text-xs mt-1">@pool_vibes</p>
+                  </div>
+                </a>
+                <!-- 숏츠 7: 호캉스 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/7.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">5성급 호텔 조식 플렉스 🥐</p>
+                    <p class="text-white/80 text-xs mt-1">@hotel_flex</p>
+                  </div>
+                </a>
+                <!-- 숏츠 8: 한옥 -->
+                <a href="#" class="swiper-slide group relative aspect-[9/16] rounded-bento overflow-hidden bg-gray-900">
+                  <img src="./assets/images/card_image/shots_section/8.webp" loading="lazy" decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    alt="숏츠썸네일">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4l12 6-12 6V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <p class="text-white text-sm font-bold line-clamp-2">고즈넉한 한옥 감성 스테이 🏮</p>
+                    <p class="text-white/80 text-xs mt-1">@hanok_lover</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             별빛체크인 기획전 섹션
+             ========================================== -->
+        <section id="themes" class="w-full py-8">
+          <div class="px-4 mx-auto max-w-7xl">
+            <h2 class="text-xl md:text-2xl font-bold text-ink-900 mb-6">별빛체크인 기획전</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <a href="#" class="group relative w-full aspect-[2/1] md:aspect-[2.5/1] rounded-bento overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop"
+                  loading="lazy" decoding="async"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt="테마1">
+                <div class="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
+                <div class="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+                  <span class="text-starry-light font-medium text-sm mb-2">프리미엄 호캉스</span>
+                  <h3 class="text-2xl font-bold text-white mb-2">도심 속 완벽한 휴식,<br>럭셔리 5성급 호텔</h3>
+                  <span
+                    class="text-white/90 text-sm border-b border-white/50 w-fit pb-1 group-hover:border-white transition-colors">자세히
+                    보기 &rarr;</span>
+                </div>
+              </a>
+              <a href="#" class="group relative w-full aspect-[2/1] md:aspect-[2.5/1] rounded-bento overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop"
+                  loading="lazy" decoding="async"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt="테마2">
+                <div class="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
+                <div class="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+                  <span class="text-green-300 font-medium text-sm mb-2">자연과 함께</span>
+                  <h3 class="text-2xl font-bold text-white mb-2">밤하늘 별이 쏟아지는<br>감성 글램핑 특가</h3>
+                  <span
+                    class="text-white/90 text-sm border-b border-white/50 w-fit pb-1 group-hover:border-white transition-colors">자세히
+                    보기 &rarr;</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             호텔 추천 섹션
+             ========================================== -->
+        <section id="hotel" class="w-full py-8 border-t border-gray-100">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-6">
+              <h2 class="text-xl md:text-2xl font-bold text-ink-900">이번 주말, 특급 호텔 어떠세요?</h2>
+              <a href="#" class="text-sm font-semibold text-starry hover:text-starry-hover transition-colors">전체보기
+                &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-card-grid="hotel">
+              <!-- 카드는 main.js의 ACCOMMODATION_SECTIONS.hotel 데이터를 기반으로 렌더링됩니다 (createAccommodationCard 참고) -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             캠핑 추천 섹션
+             ========================================== -->
+        <section id="camping" class="w-full py-8 border-t border-gray-100">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-6">
+              <h2 class="text-xl md:text-2xl font-bold text-ink-900">감성 가득, 불멍 캠핑 스팟</h2>
+              <a href="#" class="text-sm font-semibold text-starry hover:text-starry-hover transition-colors">전체보기
+                &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-card-grid="camping">
+              <!-- 카드는 main.js의 ACCOMMODATION_SECTIONS.camping 데이터를 기반으로 렌더링됩니다 (createAccommodationCard 참고) -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             신규 숙소 섹션
+             ========================================== -->
+        <section id="new" class="w-full py-8 border-t border-gray-100">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-6">
+              <h2 class="text-xl md:text-2xl font-bold text-ink-900">따끈따끈한 신축 오픈 멤버</h2>
+              <a href="#" class="text-sm font-semibold text-starry hover:text-starry-hover transition-colors">전체보기
+                &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-card-grid="new">
+              <!-- 카드는 main.js의 ACCOMMODATION_SECTIONS.new 데이터를 기반으로 렌더링됩니다 (createAccommodationCard 참고) -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             베스트 후기 섹션 (아이디 중복 문제 해결: #reviews 로 변경)
+             ========================================== -->
+        <section id="reviews" class="w-full py-12 md:py-16 bg-white">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-6 md:mb-8">
+              <div>
+                <h2 class="text-xl md:text-2xl font-bold text-ink-900">베스트 후기</h2>
+                <p class="text-ink-600 text-sm mt-1">여행의 즐거움을 공유합니다</p>
+              </div>
+              <a href="#"
+                class="flex items-center justify-center text-sm font-medium text-ink-600 border border-gray-200 rounded-full px-4 py-1.5 hover:bg-purple-100 transition-colors bg-white">
+                더보기
+                <svg class="w-3.5 h-3.5 ml-0.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- 리뷰 1 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/1.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">엘프라도</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">5</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">힐링타임~</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">엄마생신 기념해서 셋이 다녀왔는데 일요일이라 사람도 별로 없고
+                    날씨도 완전 쨍쨍해서 살짝 흐리지만 오히려 더 좋았어요~ 첫글램핑...</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>박*정</span>
+                    <span>26.05.13</span>
+                  </div>
+                </div>
+              </a>
+              <!-- 리뷰 2 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/2.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">거제노블바다펜션</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">4.8</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">가족여행다녀간거제여행</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">7월의 이른여름휴가를 보내기위해 거제노블바다펜션을 찾았어요
+                    노을맛집이라해서 예약하고갔는데 말그대로였어요 무엇보다 주인분...</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>송*현</span>
+                    <span>26.06.12</span>
+                  </div>
+                </div>
+              </a>
+              <!-- 리뷰 3 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/3.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">제주인포항풀빌라</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">4.9</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">제주인포항풀빌라</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">가족들과 구좌에 여행이라 고심끝에 고른 포항숙소...들어설때부터
+                    바다뷰랑 쫙트인 경치에 마음까지 뻥 뚫렸던숙소. 몽글몽글 수영...</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>김*아</span>
+                    <span>26.04.11</span>
+                  </div>
+                </div>
+              </a>
+              <!-- 리뷰 4 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/4.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">제주인포항풀빌라</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">4.5</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">바다뷰 맛집 숙소</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">가족여행으로 다녀왔는데 예쁜 숙소에서 힐링하고 행복한 추억 가득
+                    채우고 왔습니다 \ ( ˆoˆ ) /</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>이*지</span>
+                    <span>26.07.20</span>
+                  </div>
+                </div>
+              </a>
+              <!-- 리뷰 5 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/5.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">케이팝풀빌라</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">5</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">깔끔하고 예쁜 숙소</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">숙소 입실 약 1주 전에 찾았는데, 오픈한지 얼마 안된 곳이라
+                    다행히 예약이 가능했던 것 같아요!! 주말이라 평일에 비해 가격차이가 조...</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>박*민</span>
+                    <span>26.03.11</span>
+                  </div>
+                </div>
+              </a>
+              <!-- 리뷰 6 -->
+              <a href="#"
+                class="group flex flex-col bg-white rounded-[20px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                  <img src="./assets/images/card_image/review_section/6.webp" alt="후기 이미지" loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-[13px] font-medium text-ink-600 truncate mr-2">자연속공간</span>
+                    <div class="flex items-center gap-1 shrink-0 text-warning">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                      </svg>
+                      <span class="text-[13px] font-bold mt-0.5">4.7</span>
+                    </div>
+                  </div>
+                  <h3 class="text-base font-bold text-ink-900 mb-2 truncate">최고의선택, 최고의 숙소</h3>
+                  <p class="text-sm text-ink-400 line-clamp-2 leading-relaxed mb-4">사장님 너무 친절하시고, 숙소도 너무 좋았습니다! 다음에 가족여행
+                    갈때도 재방문 예정입니다!</p>
+                  <div class="mt-auto flex justify-between items-center pt-2 text-[12px] text-ink-400">
+                    <span>최*훈</span>
+                    <span>26.07.23</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             신뢰도 구축 섹션 (아이디 중복 해결: #features 로 변경)
+             ========================================== -->
+        <section id="features" class="w-full py-12 bg-white">
+          <div class="px-4 mx-auto max-w-7xl text-center">
+            <h2 class="text-xl md:text-4xl font-bold text-ink-900 mb-2">믿고 떠나는 #별빛체크인</h2>
+            <p class="text-ink-600 text-sm mb-10">여행이 더 쉬워지는 특별한 이유</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-starry-light text-starry rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-ink-900 mb-2">수수료 없는 무료 취소</h3>
+                <p class="text-sm text-ink-600 break-keep">체크인 1일 전까지 취소해도<br>위약금 없이 100% 전액 환불</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-starry-light text-starry rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                    </path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-ink-900 mb-2">최저가 보상제</h3>
+                <p class="text-sm text-ink-600 break-keep">타사보다 비싸다면<br>차액의 200%를 포인트로 보상</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-starry-light text-starry rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-ink-900 mb-2">365일 고객센터</h3>
+                <p class="text-sm text-ink-600 break-keep">주말, 공휴일 상관없이<br>언제든 빠른 상담 지원</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             간편 예약 CTA 섹션
+             ========================================== -->
+        <section id="reserve" class="w-full py-16">
+          <div class="px-4 mx-auto max-w-5xl">
+            <div
+              class="bg-surface-dark rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-floating relative overflow-hidden">
+              <div class="absolute -right-20 -top-20 w-64 h-64 bg-starry rounded-full blur-3xl opacity-20"></div>
+              <div class="relative z-10 text-center md:text-left mb-6 md:mb-0">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">언제 어디서나 간편하게 예약하세요</h2>
+                <p class="text-gray-400 text-sm md:text-base">별빛체크인 앱 다운로드하고 10% 추가 할인 받기</p>
+              </div>
+              <div class="relative z-10 flex gap-3 justify-center">
+                <button
+                  class="bg-white hover:bg-purple-100 text-ink-900 px-6 py-3 max-[471px]:py-1.5 rounded-full font-bold text-lg transition-colors flex items-center gap-2 cursor-pointer">
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.79 3.59-.76 1.56.06 2.85.73 3.65 1.88-3.1 1.8-2.6 5.86.51 7.11-.64 1.55-1.57 3.01-2.83 3.94zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                  </svg>
+                  App Store
+                </button>
+                <button
+                  class="bg-starry hover:bg-starry-hover text-white px-6 py-3 max-[471px]:py-1.5 rounded-full font-bold text-lg transition-colors flex items-center gap-2 cursor-pointer">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M3.61 2.99c-.24.13-.39.39-.39.69v16.64c0 .3.15.56.39.69l9.46-9.01L3.61 2.99zm10.21 8.34 2.9-2.76-9.9-5.52 7 8.28zm3.68-2.05-2.99 2.85 2.99 2.85c.73-.41 1.3-.73 1.67-.94 1.08-.62 1.08-2.2 0-2.82-.37-.21-.94-.53-1.67-.94zm-.78 6.15-2.9-2.76-7 8.28 9.9-5.52z" />
+                  </svg>
+                  Google Play
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ==========================================
+             Footer 푸터 시작
+      ========================================== -->
+    <footer class="bg-surface-dark py-12 md:py-16 text-gray-400 text-sm border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 w-full">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12">
+          <div>
+            <h4 class="text-white font-bold mb-4">서비스</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white transition-colors">공지사항</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">자주 묻는 질문</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">1:1 문의하기</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">회사 소개</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white transition-colors">회사 개요</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">인재 채용</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">제휴 제안</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">약관</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white transition-colors">이용약관</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">개인정보처리방침</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">소비자분쟁해결기준</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">고객센터</h4>
+            <p class="text-white text-xl font-bold mb-1">1544-1234</p>
+            <p class="text-xs text-gray-500 leading-normal">평일 09:00 - 18:00<br>(토/일, 공휴일 휴무)</p>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-4 border-t border-gray-800 text-xs text-gray-500 leading-relaxed break-keep">
+          <p class="font-bold text-gray-400 mb-2 text-sm">주식회사 별빛체크인컴퍼니</p>
+          <p>주소: 서울특별시 강남구 테헤란로 123 별빛빌딩 7층 <span class="hidden sm:inline">|</span><br class="sm:hidden"> 대표이사: 김별빛
+            <span class="hidden sm:inline">|</span><br class="sm:hidden"> 사업자등록번호: 123-45-67890
+          </p>
+          <p>통신판매업신고: 제 2026-서울강남-1234호 <span class="hidden sm:inline">|</span><br class="sm:hidden"> 이메일:
+            cs@starlightcheckin.com <span class="hidden sm:inline">|</span><br class="sm:hidden"> 고객센터: 1544-1234</p>
+          <p class="mt-4 text-[10px] text-gray-600">별빛체크인은 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 환불 및 투숙과 관련한 일체의 의무와 책임은 각
+            숙박업소에 있습니다.</p>
+        </div>
+
+        <div
+          class="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs text-gray-500">
+          <div class="flex items-center gap-4">
+            <img src="assets/images/별빛체크인로고svg.svg" alt="로고" class="h-8 brightness-0 invert opacity-40" />
+            <p>&copy; 2026 Starlightcheck-in. All rights reserved.</p>
+          </div>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-all" aria-label="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-all" aria-label="인스타그램">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="sideOverlay" class="fixed inset-0 bg-black/60 z-[100] hidden opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- ==========================================
+      우측 슬라이드 메뉴 섹션
+========================================== -->
+  <aside id="sideMenu"
+    class="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-[110] translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto flex flex-col">
+    <button id="menuCloseBtn"
+      class="absolute top-4 right-4 w-8 h-8 bg-gray-800/90 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors z-10"
+      aria-label="메뉴 닫기">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <div class="p-5 border-b border-gray-100">
+      <img src="assets/images/별빛체크인로고svg.svg" alt="별빛체크인 로고" class="h-6" />
+    </div>
+
+    <div class="p-6 text-center border-b border-gray-100">
+      <h3 class="text-base font-bold text-ink-900 mb-1">로그인이 필요합니다</h3>
+      <p class="text-xs text-ink-400 mb-4">로그인하시면 더 많은 혜택을 받으실 수 있습니다</p>
+      <div class="flex gap-2 justify-center">
+        <a href="./pages/login.html"
+          class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors">로그인</a>
+        <a href="./pages/login.html"
+          class="flex-1 bg-white hover:bg-gray-50 border border-gray-200 text-ink-900 text-sm font-semibold py-2.5 rounded-lg transition-colors">회원가입</a>
+      </div>
+    </div>
+
+    <!-- 카테고리 영역 -->
+    <div class="py-2 border-b border-gray-100">
+      <span class="block px-5 py-2 text-xs font-semibold text-ink-400">카테고리</span>
+      <ul class="flex flex-col">
+
+        <!-- 1. 신규오픈 (반짝임 아이콘 + NEW 배지) -->
+        <li>
+          <a href="#" class="flex items-center justify-between px-5 py-3 hover:bg-gray-50 transition-colors group">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                </path>
+              </svg>
+              <span class="text-sm font-medium text-ink-900 group-hover:text-emerald-600">신규오픈 혜택</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-emerald-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm tracking-wide">NEW</span>
+              <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+
+        <!-- 2. 특가 (태그 아이콘 + SALE 배지) -->
+        <li>
+          <a href="#" class="flex items-center justify-between px-5 py-3 hover:bg-gray-50 transition-colors group">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+                </path>
+              </svg>
+              <span class="text-sm font-medium text-ink-900 group-hover:text-purple-600">별빛체크인 특가</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-purple-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm tracking-wide">SALE</span>
+              <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+
+        <!-- 3. 풀빌라/펜션 (집 아이콘 + HOT 배지) -->
+        <li>
+          <a href="#" class="flex items-center justify-between px-5 py-3 hover:bg-gray-50 transition-colors group">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                </path>
+              </svg>
+              <span class="text-sm font-medium text-ink-900 group-hover:text-red-600">풀빌라/펜션</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm tracking-wide">HOT</span>
+              <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+
+        <!-- 4. 호텔/리조트 (빌딩 아이콘 + BEST 배지) -->
+        <li>
+          <a href="#" class="flex items-center justify-between px-5 py-3 hover:bg-gray-50 transition-colors group">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
+              <span class="text-sm font-medium text-ink-900 group-hover:text-blue-600">호텔/리조트</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-indigo-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm tracking-wide">HOT</span>
+              <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+
+        <!-- 5. 캠핑/글램핑 (모닥불 아이콘 + HIT 배지) -->
+        <li>
+          <a href="#" class="flex items-center justify-between px-5 py-3 hover:bg-gray-50 transition-colors group">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 18.657A8 8 0 016.343 7.343S7 9 7.1 10c0-1.189.41-2.365 1.12-3.321C9.62 4.757 12 4 12 4s.5 2 .5 3c0 2-2 3-2 5 0 2 2 3.2 4 3 2.1-.2 3.65-2.03 3.65-4.14 0-.17-.03-.34-.08-.51.48.88.75 1.88.75 2.92a8 8 0 01-1.163 4.387z">
+                </path>
+              </svg>
+              <span class="text-sm font-medium text-ink-900 group-hover:text-orange-600">캠핑/글램핑</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm tracking-wide">HIT</span>
+              <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- 고객센터 영역 (mt-auto 클래스를 추가하여 하단으로 밀착) -->
+    <div class="p-5 mt-auto">
+      <div class="bg-slate-900 rounded-2xl p-5 text-white">
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+            </path>
+          </svg>
+          <span class="text-sm font-semibold text-gray-300">고객센터</span>
+        </div>
+        <p class="text-2xl font-bold mb-3">1544-1234</p>
+        <div class="text-[11px] text-gray-400 leading-relaxed mb-4">
+          평일 09:00 - 18:00<br>(점심시간 12:00 - 13:00 / 주말, 공휴일 휴무)
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="flex-1 bg-white/10 hover:bg-white/20 transition-colors py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1">전화연결</button>
+          <button
+            class="flex-1 bg-[#FEE500] text-[#191919] hover:bg-[#FEE500]/90 transition-colors py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1">카톡상담</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+             맨 위로 이동 버튼 (모바일 · 태블릿 전용 FAB)
+             - lg(1024px) 이상 데스크톱에서는 숨김
+             - event-slider 좌우 화살표 버튼과 동일한 룩앤필로 통일
+      ========================================== -->
+  <button id="scrollTopBtn" type="button" aria-label="맨 위로 이동"
+    class="lg:hidden fixed right-4 sm:right-6 bottom-5 sm:bottom-6 z-sticky flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 text-ink-900 hover:text-starry hover:scale-110 active:scale-95 touch-manipulation cursor-pointer transition-all duration-300 opacity-0 translate-y-3 pointer-events-none">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <!-- ==========================================
+             JS 연결
+      ========================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

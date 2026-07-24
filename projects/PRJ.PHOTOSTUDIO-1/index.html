@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Studio Mono</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h2 class="logo">Studio Mono</h2>
+      <nav class="gnb gnb-pc"><a href="">About</a><a href="">Service</a><a href="">Projects</a><a
+          href="">Contact</a><button>문의하기</button></nav>
+      <div class="header-mobile">
+        <button class="header-mobile-collapse" aria-label="모바일 메뉴 버튼">☰</button>
+        <nav class="gnb gnb-mobile"><a href="">About</a><a href="">Service</a><a href="">Projects</a><a
+            href="">Contact</a><button>문의하기</button></nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-inner">
+        <section class="hero">
+          <div class="hero-content">
+            <img src="img/hero-back-img.png" alt="히어로 대표 이미지">
+            <h1 class="hero-text-mobile">브랜드를 더 선명하게<br>전달하는 콘텐츠<br>스튜디오</h1>
+            <div class="hero-text">
+              <h1>브랜드를 더 선명하게<br>전달하는 콘텐츠 스튜디오</h1>
+              <p>Studio Mono는 사진, 영상, 브랜드 콘텐츠를 제작하는 소규모 스튜디오입니다.<br>기획부터 촬영, 편집까지 필요한 작업을 간결하고 명확하게 제공합니다.</p>
+              <a href="#project">프로젝트 보기</a>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <h2>About</h2>
+          <p>기획부터 촬영, 편집까지 필요한 작업을<br>간결하고 명확하게 제공합니다.</p>
+        </section>
+        <section class="service">
+          <h2>Service</h2>
+          <div class="service-list">
+            <div class="service-list-card">
+              <i class="fa-regular fa-camera icon-service icon"></i>
+              <h3>브랜드 촬영</h3>
+              <p>브랜드 아이덴티티를 담은<br>사진 촬영</p>
+            </div>
+            <div class="service-list-card">
+              <i class="fa-solid fa-box-open icon-service icon"></i>
+              <h3>제품 촬영</h3>
+              <p>제품의 가치를 높이는<br>깔끔한 촬영</p>
+            </div>
+            <div class="service-list-card">
+              <i class="fa-regular fa-square-caret-right icon-service icon"></i>
+              <h3>숏폼 컨텐츠 제작</h3>
+              <p>SNS에 최적화된<br>숏폼 영상 제작</p>
+            </div>
+          </div>
+        </section>
+        <section id="project" class="project">
+          <h2>Project</h2>
+          <div class="project-list">
+            <div class="project-list-card">
+              <img src="img/프로젝트-커피용기.png" alt="프로젝트 커피촬영" class="project-list-img">
+              <h2>카페 브랜드 촬영</h2>
+              <p>브랜드 아이덴티티에 맞춘 촬영과 콘텐츠 제작</p>
+            </div>
+            <div class="project-list-card">
+              <img src="img/프로젝트-향수유리병.png" alt="프로젝트 향수유리병 촬영" class="project-list-img">
+              <h2>화장품 상세페이지 이미지</h2>
+              <p>제품 중심의 상세페이지용 촬영</p>
+            </div>
+            <div class="project-list-card">
+              <img src="img/프로젝트-카메라.png" alt="프로젝트 카메라 촬영" class="project-list-img">
+              <h2>인스타 릴스 숏폼 제작</h2>
+              <p>SNS 채널 운용용 숏폼 컨텐츠 제작</p>
+            </div>
+          </div>
+        </section>
+        <section class="contact">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div class="contact-list-card">
+              <i class="fa-solid fa-phone-volume icon-contact"></i>
+              <p>010-1234-5678</p>
+            </div>
+            <div class="contact-list-card">
+              <i class="fa-regular fa-envelope icon-contact"></i>
+              <p>hello@StudioMono.kr</p>
+            </div>
+            <button>문의하기</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2026 Studio Mono.</p>
+      <p>All right reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

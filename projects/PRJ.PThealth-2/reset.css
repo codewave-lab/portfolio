@@ -1,0 +1,62 @@
+/* ========================
+
+   CSS 초기화 오프닝 목록 
+
+========================== */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* 헤더 높이(7rem)만큼 스크롤 도착 지점을 아래로 밀어줍니다 */
+  /* 헤더 sticky 대응 */
+  scroll-padding-top: 7rem;
+}
+
+body {
+  overflow-x: hidden;
+  /* 개발 중엔 끄고
+마지막에 정말 필요할 때만 씀. Check! */
+}
+
+.wrap {
+  margin: 0 auto;
+  padding-inline: 20px;
+  width: 100%;
+  max-width: var(--layout-max-width);
+
+  /* css전 폰트위치 확인용 컬러 */
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+strong {
+  line-height: 1;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

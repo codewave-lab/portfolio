@@ -1,0 +1,339 @@
+/* =========================================================
+   La Vien 피부과 - responsive.css (Tokenized)
+========================================================= */
+
+/* =========================================================
+   🖥️ 1310px 브레이크 포인트 (PC 소형 / 대형 태블릿)
+========================================================= */
+@media (max-width: 1310px) {
+  .mobile-menu__title {
+    display: none;
+  }
+
+  .header-nav,
+  .header-cta {
+    display: none !important;
+  }
+
+  .header__inner {
+    justify-content: space-between;
+    gap: 0;
+    padding-inline: 4rem;
+  }
+
+  .location-inner {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 4rem;
+  }
+
+  .location-info {
+    width: 100%;
+    height: auto;
+    max-width: 85rem;
+    margin: 0;
+  }
+
+  .location-map {
+    width: 100%;
+    max-width: 85rem;
+    height: 50rem;
+    padding-inline: 0;
+  }
+
+  .why-inner>h3 {
+    max-width: 72rem;
+  }
+}
+
+/* =========================================================
+   📟 1075px 브레이크 포인트 (일반 태블릿 가로)
+========================================================= */
+@media (max-width: 1075px) {
+
+  .about-text__contain>h2,
+  .why-inner>h2,
+  .review-title__contain>h2 {
+    font-size: 4.8rem;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 4rem;
+    gap: 5rem;
+  }
+
+  .about-text__contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text__contain>h3 {
+    max-width: 72rem;
+  }
+
+  .about-img {
+    width: 100%;
+    max-width: 55rem;
+  }
+
+  .service-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 20px;
+    margin: 2rem 0 auto;
+  }
+
+  .service-card {
+    width: calc(50% - 1.5rem);
+    height: 30rem;
+  }
+
+  .promise-inner {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 6rem;
+  }
+
+  .promise-image-wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 60rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .promise-image {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .promise-content-wrap {
+    width: 100%;
+    padding: 0 4rem;
+  }
+
+  .promise-title {
+    font-size: 4.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .promise-subtitle {
+    text-align: center;
+  }
+
+  .location-inner {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   📱 768px 브레이크 포인트 (태블릿 세로 / 모바일 대형)
+========================================================= */
+@media (max-width: 768px) {
+
+  /* 첫 번째 슬라이드 이미지 초점을 우측으로 이동 at 테블릿에서, 모바일은 500px에 따로 */
+  .hero-slide:nth-child(1) .hero-image {
+    object-position: 60% center; 
+  }
+
+  .about,
+  .why,
+  .promise,
+  .review,
+  .location {
+    padding-top: 8rem;
+  }
+
+  .showcard {
+    padding-block: 1rem 8rem;
+  }
+
+  .promise {
+    padding-bottom: 8rem;
+  }
+
+  .hero-slide:nth-child(2) .hero-image {
+    object-position: calc(50% - 50px) center;
+  }
+
+  .about-text__contain>h2,
+  .why-inner>h2,
+  .review-title__contain>h2,
+  .promise-title {
+    font-size: 3.8rem;
+  }
+
+  .about-text__contain>h3,
+  .why-inner>h3 {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+  .slogan {
+    height: 45rem;
+  }
+
+  .slogan-text__contain h2 {
+    font-size: 3.8rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .footer-consult {
+    max-width: 100%;
+  }
+
+  .floating-sidebar__contain {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .why-inner>h3 {
+    padding: 0 20px;
+  }
+}
+
+/* =========================================================
+   📳 500px 브레이크 포인트 (스마트폰 최적화)
+========================================================= */
+@media (max-width: 500px) {
+
+  /* 좁은 모바일 화면에 맞춰 초점을 조금 더 우측으로 이동 */
+  .hero-slide:nth-child(1) .hero-image {
+    object-position: 61% center; 
+  }
+
+  .greeting__contain {
+    display: none;
+  }
+
+  .header__inner {
+    padding-inline: 2rem;
+  }
+
+  .header-logo__h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-text__contain>h2,
+  .why-inner>h2,
+  .review-title__contain>h2,
+  .promise-title,
+  .slogan-text__contain h2 {
+    font-size: 3rem;
+  }
+
+  .review-title__contain {
+    margin-bottom: 4.5rem;
+  }
+
+  .hero-slide:nth-child(2) .hero-image {
+    object-position: calc(50% - 100px) center;
+  }
+
+  .service-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 38rem;
+    height: 26rem;
+  }
+
+  .slogan-text__contain {
+    padding: 0 20px;
+  }
+
+  .promise-content-wrap {
+    padding: 0 2rem;
+  }
+
+  .promise-heading {
+    font-size: 1.9rem;
+  }
+
+  .promise-content p {
+    font-size: 1.6rem;
+    padding-right: 0;
+  }
+
+  .location-info {
+    padding: 4rem 2.5rem;
+  }
+
+  .location-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-text,
+  .hours-row {
+    font-size: 1.5rem;
+  }
+
+  .location-map {
+    height: 35rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-details li span {
+    width: 9rem;
+  }
+
+  .footer-title,
+  .consult-title {
+    font-size: 2.2rem;
+  }
+
+  .reveal-left,
+  .reveal-right {
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-up {
+    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .delay-1 {
+    transition-delay: 0.05s;
+  }
+
+  .delay-2 {
+    transition-delay: 0.15s;
+  }
+
+  .delay-3 {
+    transition-delay: 0.25s;
+  }
+
+  .delay-4 {
+    transition-delay: 0.35s;
+  }
+
+  .login-modal {
+    padding: 4rem 2.5rem 3rem;
+  }
+}

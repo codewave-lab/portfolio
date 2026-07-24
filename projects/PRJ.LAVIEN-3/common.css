@@ -1,0 +1,95 @@
+/* 전역 폰트 설정 "Noto Sans KR" */
+body {
+   font-family: "Noto Sans KR", sans-serif;
+}
+
+/* =========================================================
+   La Vien 피부과
+   디자인 토큰 System (Pruned & Optimized)
+========================================================= */
+/* =========================================================
+   La Vien 피부과 - variables.css (디자인 토큰)
+========================================================= */
+
+:root {
+   /* --- COLORS (배경 및 기본) --- */
+   --color-body: #f8f5f2;
+   --color-white: #ffffff;
+   --color-black: #111111;
+   --color-dark: #333333;
+
+   /* --- COLORS (텍스트) --- */
+   --color-text1: #3a3a3a;
+   --color-text2: #C9A96E;
+   --color-text3: #363636;
+   --color-text4: #6f6f6f;
+   --color-text-muted: #757575;
+   /* 리뷰, 서브 텍스트 */
+   --color-text-gray: #888888;
+   /* 모달 서브 텍스트 */
+   --color-text-lightgray: #999999;
+   /* 푸터 카피라이트 */
+
+   /* --- COLORS (UI & 포인트) --- */
+   --color-minor: #c4a999;
+   --color-mobile_menu: #c1a798;
+   --color-button: #d2b8a6;
+   --color-button-dark: #8b7355;
+   /* 상담 버튼 */
+   --color-footer: #e8dcca;
+   --color-gray1: #bebebe;
+
+   /* --- COLORS (보더 및 인풋) --- */
+   --color-bg-input: #f7f7f7;
+   --color-border-light: #eeeeee;
+   --color-border-gray: #eaeaea;
+   --color-border-dark: #bbbbbb;
+   --color-icon-gray: #a0a0a0;
+
+   /* --- COLORS (SNS) --- */
+   --color-naver: #03c75a;
+   --color-kakao: #fbe300;
+   --color-kakao-text: #3b1e1e;
+   --color-pink1: #e8a0b4;
+
+   /* --- COLORS (오버레이) --- */
+   --bg-overlay-modal: rgba(0, 0, 0, 0.65);
+   --bg-overlay-hero: rgba(0, 0, 0, 0.1);
+   --bg-overlay-service: rgba(0, 0, 0, 0.35);
+
+   /* --- TYPOGRAPHY --- */
+   --font-primary: "Noto Sans KR", sans-serif;
+   --font-secondary: "Cormorant Garamond", serif;
+   --font-en: "Jost", sans-serif;
+
+   /* --- RADIUS --- */
+   --radius-sm: 0.4rem;
+   --radius-md: 0.5rem;
+   /* 버튼, 인풋 */
+   --radius-lg: 1.6rem;
+   --radius-xl: 2rem;
+   /* 지도 등 큰 컨테이너 */
+
+   /* --- BORDER --- */
+   --border-list: 1px solid #e6e6e6;
+
+   /* --- SHADOW --- */
+   --shadow-header: 0 0 20px rgba(0, 0, 0, 0.08);
+   --shadow-dropdown: 0 10px 30px rgba(0, 0, 0, 0.12);
+   --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.15);
+   --shadow-card: 0 1rem 3rem rgba(0, 0, 0, 0.38);
+   --shadow-location: 0 8px 40px rgba(0, 0, 0, 0.06);
+   --shadow-modal: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+   /* --- Z-INDEX --- */
+   --z-background: -1;
+   --z-base: 0;
+   --z-raised: 100;
+   --z-overlay: 1100;
+   --z-header: 1000;
+   --z-modal: 2000;
+   --z-loader: 9999;
+
+   /* --- LAYOUT --- */
+   --layout-max-width: 132rem;
+}

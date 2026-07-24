@@ -1,0 +1,72 @@
+/* 기본 초기화 통합 */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 62.5%; }
+body { 
+  font-family: "Noto Sans KR", sans-serif; 
+  background-color: #f8f5f2; /* 메인 사이트 동일 배경 */
+  color: #111;
+  overflow: hidden;
+}
+
+.empty-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.empty-content { z-index: 2; padding: 2rem; }
+
+.eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.6rem;
+  color: #C9A96E; /* 골드 포인트 */
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #363636;
+}
+
+.desc {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #6f6f6f;
+  margin-bottom: 4rem;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 1.7rem 4rem;
+  border: 1px solid #C9A96E;
+  color: #C9A96E;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #C9A96E;
+  color: #fff;
+}
+
+/* 위트 있는 배경 요소 (은은한 빛 느낌) */
+.bg-shape {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  h1 { font-size: 3.2rem; }
+  .desc { font-size: 1.5rem; }
+}

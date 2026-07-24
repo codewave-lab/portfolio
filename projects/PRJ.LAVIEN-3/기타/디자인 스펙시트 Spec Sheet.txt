@@ -1,0 +1,418 @@
+# LA VIEN DERMATOLOGY
+
+## Landing Page Design Specification v1.0
+
+──────────────────────────────
+
+DESKTOP FRAME
+
+Width: 1440px
+Container: 1140px
+Columns: 12
+Gutter: 24px
+Margin: 150px
+
+──────────────────────────────
+
+COLOR SYSTEM
+
+Primary Background
+#F4F0EC
+
+Secondary Background
+#D9CCB9
+
+Text Primary
+#4A4038
+
+Text Secondary
+#8E8378
+
+Border
+#EAEAEA
+
+White
+#FFFFFF
+
+──────────────────────────────
+
+TYPOGRAPHY
+
+Display Title
+
+Font:
+Noto Serif KR
+
+Size:
+72px
+
+Weight:
+500
+
+Line Height:
+120%
+
+Example:
+YOUR OWN BEAUTY
+
+────────────────
+
+Section Title
+
+Font:
+Noto Serif KR
+
+Size:
+54px
+
+Weight:
+500
+
+Line Height:
+130%
+
+Example:
+아름다움을 넘어,
+건강한 피부로
+
+────────────────
+
+Main Heading
+
+Font:
+Noto Serif KR
+
+Size:
+44px
+
+Weight:
+500
+
+Line Height:
+140%
+
+Example:
+라비앙을 선택하는 이유
+
+────────────────
+
+Body Text
+
+Font:
+Pretendard
+
+Size:
+16px
+
+Weight:
+400
+
+Line Height:
+180%
+
+────────────────
+
+Caption
+
+Font:
+Pretendard
+
+Size:
+12px
+
+Weight:
+400
+
+Line Height:
+150%
+
+──────────────────────────────
+
+SPACING SYSTEM
+
+Section Padding Top
+160px
+
+Section Padding Bottom
+160px
+
+Section Gap
+180px
+
+Heading → Description
+32px
+
+Description → CTA
+40px
+
+Card Gap
+24px
+
+Gallery Gap
+20px
+
+──────────────────────────────
+
+BORDER RADIUS
+
+Button
+4px
+
+Card
+6px
+
+Gallery Image
+6px
+
+Input
+4px
+
+──────────────────────────────
+
+BUTTON SYSTEM
+
+Primary Button
+
+Height
+48px
+
+Padding
+0 24px
+
+Border
+1px solid #D9CCB9
+
+Radius
+4px
+
+Font
+14px / 500
+
+──────────────────────────────
+
+SECTION 01
+
+HERO
+
+Height
+780px
+
+Layout
+45 / 55
+
+Left Content Width
+420px
+
+Title Position
+Top 240px
+
+Title Width
+320px
+
+Navigation Height
+80px
+
+──────────────────────────────
+
+SECTION 02
+
+ABOUT
+
+Height
+760px
+
+Layout
+50 / 50
+
+Image Size
+480 × 480
+
+Column Gap
+120px
+
+──────────────────────────────
+
+SECTION 03
+
+WHY LA VIEN
+
+Heading Center
+
+Card Count
+4
+
+Card Size
+255 × 280
+
+Gap
+24px
+
+──────────────────────────────
+
+SECTION 04
+
+PROMISE
+
+Wrapper
+980 × 540
+
+Layout
+40 / 60
+
+Image
+420 × 420
+
+Accordion Row
+64px
+
+Border Bottom
+1px solid #EAEAEA
+
+Shadow
+
+0 20px 60px
+rgba(0,0,0,0.06)
+
+──────────────────────────────
+
+SECTION 05
+
+GALLERY
+
+Columns
+5
+
+Image Size
+200 × 140
+
+Gap
+20px
+
+──────────────────────────────
+
+SECTION 06
+
+CTA BANNER
+
+Height
+340px
+
+Background
+#D9CCB9
+
+Title Size
+56px
+
+Center Align
+
+──────────────────────────────
+
+SECTION 07
+
+REVIEWS
+
+Card Width
+320px
+
+Card Height
+180px
+
+Gap
+40px
+
+──────────────────────────────
+
+SECTION 08
+
+LOCATION
+
+Layout
+40 / 60
+
+Info Card
+360 × 420
+
+Map
+640 × 420
+
+──────────────────────────────
+
+SECTION 09
+
+FOOTER
+
+Height
+320px
+
+Background
+#D9CCB9
+
+Layout
+40 / 60
+
+Form Width
+520px
+
+Input Height
+48px
+
+──────────────────────────────
+
+IMAGE STYLE
+
+Tone
+
+Warm Beige
+Luxury
+Minimal
+Clean
+
+Keywords
+
+Luxury Clinic
+Premium Dermatology
+Soft Natural Light
+Warm Interior
+Minimal Beauty
+
+──────────────────────────────
+
+FONT PAIRING
+
+Heading
+
+Noto Serif KR
+
+Body
+
+Pretendard
+
+Fallback
+
+Noto Sans KR
+
+──────────────────────────────
+
+DESIGN KEYWORDS
+
+Premium
+Luxury
+Minimal
+Elegant
+Natural
+Trust
+Clean
+Soft Beige
+High-End Clinic
+
+──────────────────────────────
+
+PROJECT NAME
+
+LA VIEN DERMATOLOGY
+
+Tagline
+
+Reveal Your Natural Glow
+
+피부 본연의 광채를 되찾아드립니다.
