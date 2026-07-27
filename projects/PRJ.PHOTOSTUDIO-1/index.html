@@ -8,19 +8,20 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Studio Mono</title>
-  <link rel="stylesheet" crossorigin href="./assets/index-B6osuvzS.css">
+  <script type="module" crossorigin src="./assets/index-BH34KWCI.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C7QzXi25.css">
 </head>
 
 <body>
   <div class="wrap">
     <header class="header">
       <h2 class="logo">Studio Mono</h2>
-      <nav class="gnb gnb-pc"><a href="">About</a><a href="">Service</a><a href="">Projects</a><a
-          href="">Contact</a><button>문의하기</button></nav>
+      <nav class="gnb gnb-pc"><a href="#about">About</a><a href="#service">Service</a><a href="#project">Projects</a><a
+          href="#contact">Contact</a><button>문의하기</button></nav>
       <div class="header-mobile">
         <button class="header-mobile-collapse" aria-label="모바일 메뉴 버튼">☰</button>
-        <nav class="gnb gnb-mobile"><a href="">About</a><a href="">Service</a><a href="">Projects</a><a
-            href="">Contact</a><button>문의하기</button></nav>
+        <nav class="gnb gnb-mobile"><a href="#about">About</a><a href="#service">Service</a><a href="#project">Projects</a><a
+            href="#contact">Contact</a><button>문의하기</button></nav>
       </div>
     </header>
     <main class="main">
@@ -36,11 +37,11 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <h2>About</h2>
           <p>기획부터 촬영, 편집까지 필요한 작업을<br>간결하고 명확하게 제공합니다.</p>
         </section>
-        <section class="service">
+        <section id="service" class="service">
           <h2>Service</h2>
           <div class="service-list">
             <div class="service-list-card">
@@ -80,7 +81,7 @@
             </div>
           </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
           <h2>Contact</h2>
           <div class="contact-list">
             <div class="contact-list-card">
@@ -91,7 +92,7 @@
               <i class="fa-regular fa-envelope icon-contact"></i>
               <p>hello@StudioMono.kr</p>
             </div>
-            <button>문의하기</button>
+            <a href="#">문의하기</a>
           </div>
         </section>
       </div>
@@ -100,9 +101,7 @@
       <p>&copy; 2026 Studio Mono.</p>
       <p>All right reserved.</p>
     </footer>
-  </div>
-  <script src="script.js">
-  </script>
+  </div>
 </body>
 
 </html>
