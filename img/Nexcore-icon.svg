@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- 배경 그라데이션 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    
+    <!-- 브랜드 컬러 네온 그라데이션 -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#8a2be2" />
+    </linearGradient>
+    
+    <!-- 빛 번짐(Glow) 효과 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- 어두운 배경 -->
+  <rect width="400" height="400" fill="url(#bgGrad)" />
+
+  <!-- 배경 네온 빛 (Cyan & Purple) -->
+  <circle cx="320" cy="100" r="100" fill="#00f0ff" opacity="0.35" filter="url(#glow)" />
+  <circle cx="80" cy="300" r="120" fill="#8a2be2" opacity="0.25" filter="url(#glow)" />
+
+  <!-- 글래스모피즘 메인 카드 -->
+  <rect x="60" y="100" width="280" height="200" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+  
+  <!-- 카드 상단 컨트롤 닷 -->
+  <circle cx="85" cy="125" r="5" fill="#ff5f56" />
+  <circle cx="105" cy="125" r="5" fill="#ffbd2e" />
+  <circle cx="125" cy="125" r="5" fill="#27c93f" />
+  <line x1="60" y1="145" x2="340" y2="145" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+  <!-- 데이터 차트 바 -->
+  <rect x="90" y="230" width="35" height="40" rx="4" fill="url(#neonGrad)" />
+  <rect x="145" y="190" width="35" height="80" rx="4" fill="url(#neonGrad)" />
+  <rect x="200" y="160" width="35" height="110" rx="4" fill="url(#neonGrad)" />
+  <rect x="255" y="200" width="35" height="70" rx="4" fill="url(#neonGrad)" />
+
+  <!-- 떠다니는 미니 카드 (포인트) -->
+  <rect x="230" y="60" width="130" height="45" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+  <text x="250" y="88" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">+240%</text>
+  <circle cx="335" cy="82" r="4" fill="#00f0ff" />
+</svg>
