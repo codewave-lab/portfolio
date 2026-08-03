@@ -24,7 +24,7 @@
   <!-- 1. GNB -->
   <header class="header">
     <div class="header__logo">NEXCORE<span>.</span></div>
-    <nav class="header__nav">
+    <nav class="header__nav" aria-label="메인 네비게이션">
       <a href="#features">Features</a>
       <a href="#solutions">Solutions</a>
       <a href="#about">Company</a>
@@ -33,19 +33,18 @@
     <a href="#contact" class="header__btn desktop-only">문의하기</a>
 
     <!-- 모바일 햄버거 버튼 -->
-    <button class="header__hbg" aria-label="메뉴 열기">
+    <button class="header__hbg" aria-label="모바일 메뉴 열기">
       <span></span><span></span><span></span>
     </button>
   </header>
 
   <!-- 💡 2. 모바일 전용 전체화면 메뉴 오버레이 -->
   <div class="mobile-menu" id="mobile-menu">
-    <nav class="mobile-menu__nav">
+    <nav class="mobile-menu__nav" aria-label="모바일 네비게이션">
       <a href="#features" class="menu-link">Features</a>
       <a href="#solutions" class="menu-link">Solutions</a>
       <a href="#about" class="menu-link">Company</a>
       <a href="#pricing" class="menu-link">Pricing</a>
-      <!-- 💡 인라인 스타일 지우고 클래스명 추가 -->
       <a href="#contact" class="btn-primary mobile-menu__cta">도입 문의하기</a>
     </nav>
   </div>
@@ -105,7 +104,7 @@
       </div>
     </section>
 
-    <!-- 3. Features Section (카드 2개 추가) -->
+    <!-- 3. Features Section -->
     <section id="features" class="features">
       <div class="features__inner">
         <div class="features__left">
@@ -129,13 +128,11 @@
             <h3>다이내믹 경영 대시보드</h3>
             <p>C레벨부터 실무자까지 각자의 KPI에 맞춘 커스텀 대시보드를 드래그 앤 드롭으로 구성하고 실시간으로 공유할 수 있습니다.</p>
           </div>
-          <!-- 신규 추가 1 -->
           <div class="feature-card">
             <div class="f-icon">🛡️</div>
             <h3>엔터프라이즈급 데이터 보안</h3>
             <p>ISO 27001 인증 획득 및 엔드투엔드(E2E) AES-256 암호화 기술을 적용하여 기업의 가장 민감한 핵심 데이터를 안전하게 보호합니다.</p>
           </div>
-          <!-- 신규 추가 2 -->
           <div class="feature-card">
             <div class="f-icon">📨</div>
             <h3>자동화된 인텔리전스 리포팅</h3>
@@ -170,7 +167,7 @@
       </div>
     </section>
 
-    <!-- 5. About Section (연혁 2019년까지 확장) -->
+    <!-- 5. About Section -->
     <section id="about" class="history">
       <div class="history__header text-center">
         <span class="badge-outline">OUR JOURNEY</span>
@@ -182,7 +179,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year text-gradient">2026</h3>
-            <h4 class="timeline-title">NEXCORE AI 2.0 및 엔터프라이즈 확장</h4>
+            <p class="timeline-sub-title font-weight-bold">NEXCORE AI 2.0 및 엔터프라이즈 확장</p>
             <p>초거대 언어모델(LLM) 기반의 자연어 데이터 탐색 기능 상용화 및 포춘 500대 기업 온프레미스(On-premise) 솔루션 공급 시작.</p>
           </div>
         </div>
@@ -190,7 +187,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year">2025</h3>
-            <h4 class="timeline-title">시리즈 B 200억 투자 유치</h4>
+            <p class="timeline-sub-title font-weight-bold">시리즈 B 200억 투자 유치</p>
             <p>데이터 보안 인증(ISO 27001) 획득 및 글로벌 진출 기반 마련. 누적 처리 데이터 10PB(페타바이트) 돌파.</p>
           </div>
         </div>
@@ -198,16 +195,15 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year">2024</h3>
-            <h4 class="timeline-title">NEXCORE SaaS 1.0 공식 런칭</h4>
+            <p class="timeline-sub-title font-weight-bold">NEXCORE SaaS 1.0 공식 런칭</p>
             <p>클라우드 기반 실시간 데이터 파이프라인 아키텍처 구축. 런칭 6개월 만에 스타트업 및 중소기업 300여 개사 고객 확보.</p>
           </div>
         </div>
-        <!-- 연혁 확장 부분 -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year">2022</h3>
-            <h4 class="timeline-title">시리즈 A 투자 유치 및 주요 대기업 PoC 진행</h4>
+            <p class="timeline-sub-title font-weight-bold">시리즈 A 투자 유치 및 주요 대기업 PoC 진행</p>
             <p>국내 주요 이커머스 및 금융 5개사와 성공적인 기술 검증(PoC) 완료. 누적 고객사 100곳 돌파 및 AI 엔진 고도화.</p>
           </div>
         </div>
@@ -215,7 +211,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year">2020</h3>
-            <h4 class="timeline-title">데이터 분석 AI 알고리즘 특허 출원</h4>
+            <p class="timeline-sub-title font-weight-bold">데이터 분석 AI 알고리즘 특허 출원</p>
             <p>자체 개발한 이상 탐지 및 시계열 트렌드 예측 알고리즘 기술 특허 3건 출원 및 클로즈드 베타 서비스 오픈.</p>
           </div>
         </div>
@@ -223,7 +219,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3 class="timeline-year">2019</h3>
-            <h4 class="timeline-title">NEXCORE 프로젝트 출범</h4>
+            <p class="timeline-sub-title font-weight-bold">NEXCORE 프로젝트 출범</p>
             <p>파편화된 데이터 생태계를 통합하겠다는 비전으로 팀 NEXCORE 결성 및 핵심 데이터 처리 엔진 프로토타입 개발.</p>
           </div>
         </div>
@@ -259,9 +255,10 @@
       <div class="pricing__header text-center">
         <h2 class="features__title">기업의 데이터 성숙도에 맞춘<br>합리적인 플랜.</h2>
         <div class="pricing__toggle">
+          <!-- 💡 1. 라벨 접근성 개선: input과 명확히 매핑되도록 id와 for 지정 및 aria-label 추가 -->
           <span class="toggle-label" id="label-yearly">연간 결제 시 20% 할인</span>
-          <label class="switch">
-            <input type="checkbox" id="pricing-switch" checked>
+          <label class="switch" for="pricing-switch">
+            <input type="checkbox" id="pricing-switch" checked aria-labelledby="label-yearly">
             <span class="slider"></span>
           </label>
         </div>
@@ -326,14 +323,14 @@
         <h2>가장 앞서가는 기업들은<br>이미 NEXCORE로 예측하고 있습니다.</h2>
         <p>14일간의 무료 POC(기술 검증)를 통해 자사 데이터로 플랫폼의 가치를 직접 확인해 보세요.</p>
         <form id="cta-form" class="cta__form">
-          <input type="email" required placeholder="업무용 이메일을 입력해주세요" />
+          <input type="email" required placeholder="업무용 이메일을 입력해주세요" aria-label="업무용 이메일" />
           <button type="submit" class="btn-primary">무료로 시작하기</button>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- 9. Footer (서브페이지 연결 및 카피라이트 변경) -->
+  <!-- 9. Footer -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__left">
@@ -342,19 +339,20 @@
       </div>
       <div class="footer__links">
         <div class="f-col">
-          <h4>Product</h4>
+          <!-- 💡 2. 헤딩 레벨 순서 정돈 (h4 -> 시맨틱 맞춤) -->
+          <h3 class="footer-heading">Product</h3>
           <a href="#features">Platform Overview</a>
           <a href="#solutions">Solutions</a>
           <a href="#pricing">Pricing & Plans</a>
         </div>
         <div class="f-col">
-          <h4>Company</h4>
+          <h3 class="footer-heading">Company</h3>
           <a href="#about">Our Story</a>
           <a href="./pages/careers.html">Careers</a>
           <a href="./pages/blog.html">Tech Blog</a>
         </div>
         <div class="f-col">
-          <h4>Legal</h4>
+          <h3 class="footer-heading">Legal</h3>
           <a href="./pages/terms.html">Terms of Service</a>
           <a href="./pages/privacy.html">Privacy Policy</a>
           <a href="./pages/security.html">Security (ISO 27001)</a>
@@ -366,25 +364,25 @@
     </div>
   </footer>
 
-  <!-- 10. 고도화된 B2B 맞춤형 모달창 -->
+  <!-- 10. 모달창 -->
   <div id="nx-modal" class="nx-modal-overlay">
     <div class="nx-modal-box">
-      <button class="nx-modal-close" id="modal-close">&times;</button>
+      <button class="nx-modal-close" id="modal-close" aria-label="모달 닫기">&times;</button>
       <h3>NEXCORE 도입 컨설팅 및 데모 신청</h3>
       <p>전문 데이터 아키텍트가 귀사의 비즈니스 환경에 최적화된 AI 분석 파이프라인을 제안해 드립니다.</p>
       <form id="modal-form" class="nx-modal-form">
         <div class="form-row">
-          <input type="text" placeholder="회사명" required />
-          <input type="text" placeholder="담당자 성함" required />
+          <input type="text" placeholder="회사명" required aria-label="회사명" />
+          <input type="text" placeholder="담당자 성함" required aria-label="담당자 성함" />
         </div>
-        <input type="email" placeholder="업무용 이메일" required />
-        <select required>
+        <input type="email" placeholder="업무용 이메일" required aria-label="업무용 이메일" />
+        <select required aria-label="도입 예정 시기">
           <option value="" disabled selected>도입 예정 시기를 선택해주세요</option>
           <option value="1">1개월 이내 (빠른 도입 희망)</option>
           <option value="3">3개월 이내</option>
           <option value="6">6개월 이내 (검토 단계)</option>
         </select>
-        <textarea placeholder="현재 겪고 계신 데이터 분석의 어려움이나 문의사항을 간단히 남겨주세요." rows="3"></textarea>
+        <textarea placeholder="현재 겪고 계신 데이터 분석의 어려움이나 문의사항을 간단히 남겨주세요." rows="3" aria-label="문의사항"></textarea>
         <button type="submit" class="btn-primary w-100">컨설팅 접수하기</button>
       </form>
     </div>
