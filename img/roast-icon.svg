@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 배경: 딥 에스프레소 차콜 둥근 사각형 -->
+  <rect width="100" height="100" rx="22" fill="#1c1917" />
+  
+  <!-- 커피 원두 실루엣 (정교한 곡선) -->
+  <path d="M50 15C32 15 20 30 20 50C20 70 32 85 50 85C68 85 80 70 80 50C80 30 68 15 50 15Z" fill="none" stroke="#ff5a1f" stroke-width="5" stroke-linecap="round" />
+  
+  <!-- 원두 중앙의 정교한 로스팅 크랙 (C와 R의 곡선 은유) -->
+  <path d="M50 25C42 38 42 62 50 75" fill="none" stroke="#ff5a1f" stroke-width="5" stroke-linecap="round" />
+  
+  <!-- 하이엔드 타이포그래피 포인트 닷 -->
+  <circle cx="63" cy="38" r="4" fill="#ffffff" />
+</svg>

@@ -1,0 +1,120 @@
+<!-- pages/admin.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROAST & CRAFT | ADMIN</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  
+  
+  <style>
+    /* ==========================================
+       [BUG FIX] 마우스 커서 강제 복구 로직
+       common.css의 cursor: none; 속성을 덮어씁니다.
+    ========================================== */
+    * { cursor: auto !important; }
+    button, a, select { cursor: pointer !important; }
+    input, textarea { cursor: text !important; }
+    /* ========================================== */
+
+    body { background-color: var(--color-bg-base); display: flex; flex-direction: column; min-height: 100vh;}
+    
+    /* Login Section */
+    #loginSection { flex: 1; display: flex; align-items: center; justify-content: center; }
+    .login-box { background: var(--color-bg-surface); padding: 4rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; width: 400px; }
+    .login-box input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--color-border); font-family: inherit; }
+    .login-box button { width: 100%; }
+
+    /* Dashboard Section */
+    #dashboardSection { display: none; width: 100%; max-width: 1400px; margin: 0 auto; padding: 4rem 4vw; }
+    .admin-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+    
+    /* Stats Widget */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+    .stat-card { background: var(--color-bg-surface); padding: 2rem; border-left: 4px solid var(--color-accent); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+    .stat-card h4 { color: var(--color-text-secondary); font-size: 1rem; margin-bottom: 0.5rem; }
+    .stat-card .num { font-family: var(--font-en-display); font-size: 3rem; color: var(--color-text-primary); line-height: 1; }
+
+    /* Table */
+    .admin-table { width: 100%; border-collapse: collapse; background: var(--color-bg-surface); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .admin-table th, .admin-table td { padding: 1.2rem; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
+    .admin-table th { font-family: var(--font-en-display); color: var(--color-accent); font-size: 1rem; }
+    
+    /* Actions */
+    .status-select { padding: 0.5rem; border: 1px solid var(--color-border); font-family: inherit; background: transparent; }
+    .btn-delete { color: #ef4444; font-size: 0.875rem; font-weight: 600; text-decoration: underline; background: transparent; border: none;}
+    .btn-logout { font-size: 0.875rem; color: var(--color-text-secondary); text-decoration: underline; background: transparent; border: none; margin-left: 1rem;}
+  </style>
+  <script type="module" crossorigin src="../assets/admin-B9oxWO10.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/dist-DH-byRI5.js">
+  <link rel="stylesheet" crossorigin href="../assets/dist-ByZ6H5Pv.css">
+</head>
+<body>
+
+  <!-- 1. 보안 로그인 화면 -->
+  <div id="loginSection">
+    <div class="login-box">
+      <h2 class="text-display" style="margin-bottom: 0.5rem;">ADMIN <span style="color: var(--color-accent);">LOGIN</span></h2>
+      <p style="margin-bottom: 2rem; color: var(--color-text-secondary);">관리자 계정으로 로그인해주세요.</p>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" class="btn-primary">LOGIN</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. 대시보드 본문 -->
+  <div id="dashboardSection">
+    <div class="admin-header">
+      <div>
+        <h1 class="text-display" style="font-size: 2.5rem;">INQUIRY <span style="color: var(--color-accent);">DASHBOARD</span></h1>
+      </div>
+      <div>
+        <a href="../index.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">← 메인으로</a>
+        <button id="btnLogout" class="btn-logout">로그아웃</button>
+      </div>
+    </div>
+
+    <!-- 통계 위젯 -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h4>총 가맹 문의</h4>
+        <div class="num" id="statTotal">0</div>
+      </div>
+      <div class="stat-card">
+        <h4>신규 대기중</h4>
+        <div class="num" id="statPending" style="color: var(--color-accent);">0</div>
+      </div>
+      <div class="stat-card">
+        <h4>상담 완료</h4>
+        <div class="num" id="statDone">0</div>
+      </div>
+    </div>
+    
+    <!-- 데이터 테이블 -->
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>NO</th>
+          <th>NAME / COMPANY</th>
+          <th>PHONE</th>
+          <th>LOCATION</th>
+          <th style="width: 30%;">MESSAGE</th>
+          <th>DATE</th>
+          <th>STATUS</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="inquiryList">
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
