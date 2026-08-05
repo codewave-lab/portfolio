@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROAST & CRAFT | ADMIN</title>
+  <title>ROAST & CRAFT | ADMIN PORTAL</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,24 +15,22 @@
   <style>
     /* ==========================================
        [BUG FIX] 마우스 커서 강제 복구 로직
-       common.css의 cursor: none; 속성을 덮어씁니다.
     ========================================== */
     * { cursor: auto !important; }
     button, a, select { cursor: pointer !important; }
     input, textarea { cursor: text !important; }
-    /* ========================================== */
 
     body { background-color: var(--color-bg-base); display: flex; flex-direction: column; min-height: 100vh;}
     
     /* Login Section */
-    #loginSection { flex: 1; display: flex; align-items: center; justify-content: center; }
-    .login-box { background: var(--color-bg-surface); padding: 4rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; width: 400px; }
-    .login-box input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--color-border); font-family: inherit; }
+    #loginSection { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .login-box { background: var(--color-bg-surface); padding: 4rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; width: 100%; max-width: 400px; } 
+    .login-box input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--color-border); font-family: inherit; box-sizing: border-box;}
     .login-box button { width: 100%; }
 
     /* Dashboard Section */
     #dashboardSection { display: none; width: 100%; max-width: 1400px; margin: 0 auto; padding: 4rem 4vw; }
-    .admin-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+    .admin-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
     
     /* Stats Widget */
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
@@ -40,17 +38,119 @@
     .stat-card h4 { color: var(--color-text-secondary); font-size: 1rem; margin-bottom: 0.5rem; }
     .stat-card .num { font-family: var(--font-en-display); font-size: 3rem; color: var(--color-text-primary); line-height: 1; }
 
-    /* Table */
-    .admin-table { width: 100%; border-collapse: collapse; background: var(--color-bg-surface); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-    .admin-table th, .admin-table td { padding: 1.2rem; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
-    .admin-table th { font-family: var(--font-en-display); color: var(--color-accent); font-size: 1rem; }
+    /* Table Responsive */
+    .table-responsive {
+      width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: var(--color-bg-surface); border-radius: 8px;
+    }
     
-    /* Actions */
-    .status-select { padding: 0.5rem; border: 1px solid var(--color-border); font-family: inherit; background: transparent; }
-    .btn-delete { color: #ef4444; font-size: 0.875rem; font-weight: 600; text-decoration: underline; background: transparent; border: none;}
+    /* Table Styling */
+    .admin-table { width: 100%; border-collapse: collapse; min-width: 1100px; table-layout: fixed; } 
+    .admin-table th, .admin-table td { padding: 1.2rem; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
+    .admin-table th { font-family: var(--font-en-display); color: var(--color-accent); font-size: 1rem; white-space: nowrap; }
+    
+    .admin-table th:nth-child(1) { width: 5%; }
+    .admin-table th:nth-child(2) { width: 12%; }
+    .admin-table th:nth-child(3) { width: 13%; }
+    .admin-table th:nth-child(4) { width: 15%; }
+    .admin-table th:nth-child(5) { width: 33%; } 
+    .admin-table th:nth-child(6) { width: 10%; }
+    .admin-table th:nth-child(7) { width: 7%; }
+    .admin-table th:nth-child(8) { width: 5%; }
+
+    .admin-table tbody tr { transition: background-color var(--transition-fast); }
+    .admin-table tbody tr:hover { background-color: rgba(255, 90, 31, 0.04); }
+    
+    /* [수정] 메세지 열 디자인: 텍스트 1줄 처리 + 더보기 버튼 */
+    .admin-table td:nth-child(5) {
+      display: flex; 
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-right: 1.5rem;
+    }
+    .msg-preview {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 말줄임표 처리 */
+      flex: 1;
+    }
+
+    /* 더보기 버튼 스타일 */
+    .btn-view-more {
+      background: var(--color-bg-base); border: 1px solid var(--color-border);
+      padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s; color: var(--color-text-primary);
+      white-space: nowrap;
+    }
+    .btn-view-more:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+    /* Actions & Select */
+    .status-select { padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; font-size: 0.875rem; background: var(--color-bg-base); cursor: pointer; outline: none; }
+    .status-select:focus { border-color: var(--color-accent); }
+    .btn-delete { color: #ef4444; font-size: 0.875rem; font-weight: 600; text-decoration: underline; background: transparent; border: none; padding: 0.5rem;}
+    .btn-delete:hover { color: #b91c1c; }
     .btn-logout { font-size: 0.875rem; color: var(--color-text-secondary); text-decoration: underline; background: transparent; border: none; margin-left: 1rem;}
+    
+    /* ==========================================
+       [신규] 상세 메세지 뷰어 모달(팝업) UI 
+    ========================================== */
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none; align-items: center; justify-content: center;
+      z-index: 9999; opacity: 0; transition: opacity 0.3s ease;
+    }
+    .modal-overlay.is-active { display: flex; opacity: 1; }
+    
+    .modal-content {
+      background: var(--color-bg-surface); width: 90%; max-width: 500px;
+      border-radius: 12px; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px); transition: transform 0.3s ease;
+    }
+    .modal-overlay.is-active .modal-content { transform: translateY(0); }
+    
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+    .btn-close-modal { font-size: 2rem; background: none; border: none; color: var(--color-text-secondary); cursor: pointer; line-height: 1;}
+    .btn-close-modal:hover { color: var(--color-accent); }
+    
+    .modal-body p { margin-bottom: 0.75rem; font-size: 1rem; }
+    .modal-body strong { color: var(--color-accent); font-family: var(--font-en-display); letter-spacing: 0.05em; margin-right: 0.5rem;}
+    .modal-message-box {
+      background: var(--color-bg-base); padding: 1.5rem; border-radius: 8px;
+      margin-top: 1rem; white-space: pre-wrap; word-break: break-all; line-height: 1.6; font-size: 1rem;
+      max-height: 400px; overflow-y: auto; border: 1px solid var(--color-border);
+    }
+
+    /* 반응형 */
+    @media (max-width: 1024px) {
+      .stats-grid { gap: 1rem; }
+      .stat-card { padding: 1.5rem; }
+    }
+    @media (max-width: 768px) {
+      .login-box { padding: 2rem; }
+      #dashboardSection { padding: 2rem 4vw; }
+      .admin-header { flex-direction: column; align-items: flex-start; margin-bottom: 2rem; }
+      .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .table-responsive { box-shadow: none; background: transparent; overflow-x: hidden; }
+      .admin-table { min-width: 100%; border-collapse: separate; border-spacing: 0 1rem; }
+      .admin-table thead { display: none; }
+      .admin-table tbody, .admin-table tr, .admin-table td { display: block; width: 100%; }
+      .admin-table tr { background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1rem; }
+      .admin-table td { padding: 0.75rem 0; text-align: right; border-bottom: 1px dashed var(--color-border); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+      .admin-table td:last-child { border-bottom: none; padding-bottom: 0; }
+      .admin-table td::before { font-family: var(--font-en-display); color: var(--color-accent); font-size: 0.875rem; text-align: left; font-weight: 600; white-space: nowrap; }
+      .admin-table td:nth-child(1)::before { content: "NO"; }
+      .admin-table td:nth-child(2)::before { content: "NAME / COMPANY"; }
+      .admin-table td:nth-child(3)::before { content: "PHONE"; }
+      .admin-table td:nth-child(4)::before { content: "LOCATION"; }
+      .admin-table td:nth-child(5)::before { content: "MESSAGE"; }
+      .admin-table td:nth-child(6)::before { content: "DATE"; }
+      .admin-table td:nth-child(7)::before { content: "STATUS"; }
+      .admin-table td:nth-child(8)::before { content: "ACTION"; }
+    }
   </style>
-  <script type="module" crossorigin src="../assets/admin-B9oxWO10.js"></script>
+  <script type="module" crossorigin src="../assets/admin-DAvSLoMk.js"></script>
   <link rel="modulepreload" crossorigin href="../assets/dist-DH-byRI5.js">
   <link rel="stylesheet" crossorigin href="../assets/dist-ByZ6H5Pv.css">
 </head>
@@ -60,11 +160,11 @@
   <div id="loginSection">
     <div class="login-box">
       <h2 class="text-display" style="margin-bottom: 0.5rem;">ADMIN <span style="color: var(--color-accent);">LOGIN</span></h2>
-      <p style="margin-bottom: 2rem; color: var(--color-text-secondary);">관리자 계정으로 로그인해주세요.</p>
+      <p style="margin-bottom: 2rem; color: var(--color-text-secondary);">프리미엄 관리자 계정으로 접속합니다.</p>
       <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required />
+        <input type="email" id="email" placeholder="Email Address" required />
         <input type="password" id="password" placeholder="Password" required />
-        <button type="submit" class="btn-primary">LOGIN</button>
+        <button type="submit" class="btn-primary">SECURE LOGIN</button>
       </form>
     </div>
   </div>
@@ -76,7 +176,7 @@
         <h1 class="text-display" style="font-size: 2.5rem;">INQUIRY <span style="color: var(--color-accent);">DASHBOARD</span></h1>
       </div>
       <div>
-        <a href="../index.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">← 메인으로</a>
+        <a href="../index.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">← 메인 스토어</a>
         <button id="btnLogout" class="btn-logout">로그아웃</button>
       </div>
     </div>
@@ -97,23 +197,42 @@
       </div>
     </div>
     
-    <!-- 데이터 테이블 -->
-    <table class="admin-table">
-      <thead>
-        <tr>
-          <th>NO</th>
-          <th>NAME / COMPANY</th>
-          <th>PHONE</th>
-          <th>LOCATION</th>
-          <th style="width: 30%;">MESSAGE</th>
-          <th>DATE</th>
-          <th>STATUS</th>
-          <th>ACTION</th>
-        </tr>
-      </thead>
-      <tbody id="inquiryList">
-      </tbody>
-    </table>
+    <!-- 테이블 -->
+    <div class="table-responsive">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>NO</th>
+            <th>NAME / COMPANY</th>
+            <th>PHONE</th>
+            <th>LOCATION</th>
+            <th>MESSAGE</th>
+            <th>DATE</th>
+            <th>STATUS</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="inquiryList">
+          <!-- JS 렌더링 영역 -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- [신규] 메시지 상세 확인 모달창 -->
+  <div id="messageModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="text-display">INQUIRY <span style="color: var(--color-accent);">DETAILS</span></h3>
+        <button class="btn-close-modal" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>NAME</strong> <span id="modalName"></span></p>
+        <p><strong>PHONE</strong> <span id="modalPhone"></span></p>
+        <p><strong>LOCATION</strong> <span id="modalLocation"></span></p>
+        <div id="modalMessageText" class="modal-message-box"></div>
+      </div>
+    </div>
   </div>
 
 </body>
