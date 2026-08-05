@@ -61,26 +61,36 @@
     .admin-table tbody tr { transition: background-color var(--transition-fast); }
     .admin-table tbody tr:hover { background-color: rgba(255, 90, 31, 0.04); }
     
-    /* [수정] 메세지 열 디자인: 텍스트 1줄 처리 + 더보기 버튼 */
-    .admin-table td:nth-child(5) {
-      display: flex; 
+    /* ==========================================
+       [완벽 해결] 메시지 열 보더선 틀어짐 & 말줄임표 원천 해결 (Flex 방식)
+    ========================================== */
+    .msg-cell-wrapper {
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      padding-right: 1.5rem;
+      gap: 1rem; /* 텍스트와 버튼 사이 간격 */
+      width: 100%;
     }
     .msg-preview {
+      flex: 1; /* 남은 공간 모두 차지 */
+      min-width: 0; /* Flexbox 내에서 말줄임표(...)가 제대로 작동하기 위한 필수 조건 */
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; /* 말줄임표 처리 */
-      flex: 1;
+      text-overflow: ellipsis;
     }
 
     /* 더보기 버튼 스타일 */
     .btn-view-more {
-      background: var(--color-bg-base); border: 1px solid var(--color-border);
-      padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;
-      cursor: pointer; transition: all 0.2s; color: var(--color-text-primary);
+      flex-shrink: 0; /* 공간이 좁아져도 버튼 크기는 유지 */
+      background: var(--color-bg-base); 
+      border: 1px solid var(--color-border);
+      padding: 0.35rem 0.7rem; 
+      border-radius: 4px; 
+      font-size: 0.8rem; 
+      font-weight: 600;
+      cursor: pointer; 
+      transition: all 0.2s; 
+      color: var(--color-text-primary);
       white-space: nowrap;
     }
     .btn-view-more:hover { border-color: var(--color-accent); color: var(--color-accent); }
@@ -93,7 +103,7 @@
     .btn-logout { font-size: 0.875rem; color: var(--color-text-secondary); text-decoration: underline; background: transparent; border: none; margin-left: 1rem;}
     
     /* ==========================================
-       [신규] 상세 메세지 뷰어 모달(팝업) UI 
+       상세 메세지 뷰어 모달(팝업) UI 
     ========================================== */
     .modal-overlay {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -139,7 +149,7 @@
       .admin-table tr { background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1rem; }
       .admin-table td { padding: 0.75rem 0; text-align: right; border-bottom: 1px dashed var(--color-border); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
       .admin-table td:last-child { border-bottom: none; padding-bottom: 0; }
-      .admin-table td::before { font-family: var(--font-en-display); color: var(--color-accent); font-size: 0.875rem; text-align: left; font-weight: 600; white-space: nowrap; }
+      .admin-table td::before { font-family: var(--font-en-display); color: var(--color-accent); font-size: 0.875rem; text-align: left; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
       .admin-table td:nth-child(1)::before { content: "NO"; }
       .admin-table td:nth-child(2)::before { content: "NAME / COMPANY"; }
       .admin-table td:nth-child(3)::before { content: "PHONE"; }
@@ -148,9 +158,19 @@
       .admin-table td:nth-child(6)::before { content: "DATE"; }
       .admin-table td:nth-child(7)::before { content: "STATUS"; }
       .admin-table td:nth-child(8)::before { content: "ACTION"; }
+
+      /* 모바일 전용 MESSAGE 칸 정렬 완벽 대응 (수정됨) */
+      .msg-cell-wrapper {
+        flex: 1; /* 부모(td) 공간 안에서 유연하게 크기 조절 */
+        min-width: 0; /* 내용이 길어져도 화면 밖으로 밀어내지 못하게 제한 */
+        justify-content: flex-end;
+      }
+      .msg-preview {
+        text-align: right; /* 짧은 텍스트일 경우 우측 정렬 유지 */
+      }
     }
   </style>
-  <script type="module" crossorigin src="../assets/admin-DAvSLoMk.js"></script>
+  <script type="module" crossorigin src="../assets/admin-BuAvdNlg.js"></script>
   <link rel="modulepreload" crossorigin href="../assets/dist-DH-byRI5.js">
   <link rel="stylesheet" crossorigin href="../assets/dist-ByZ6H5Pv.css">
 </head>
@@ -219,7 +239,7 @@
     </div>
   </div>
 
-  <!-- [신규] 메시지 상세 확인 모달창 -->
+  <!-- 메시지 상세 확인 모달창 -->
   <div id="messageModal" class="modal-overlay">
     <div class="modal-content">
       <div class="modal-header">
